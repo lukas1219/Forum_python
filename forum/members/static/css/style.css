@@ -1,0 +1,437 @@
+body {
+  margin: 0;
+  font-family: 'Open Sans', sans-serif;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-size: 16px;
+}
+
+.header {
+  background: #8b2323;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding-left: 45px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  height: 60px;
+}
+
+.header #benutzer {
+  position: absolute;
+  right: 300px;
+  max-width: 200px;
+  width: auto;
+  height: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.header #password {
+  position: absolute;
+  right: 15px;
+  max-width: 200px;
+  width: auto;
+  height: 15px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+  top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.header .text-benutzer {
+  position: absolute;
+  right: 480px;
+  max-width: 200px;
+  width: auto;
+  height: 20px;
+  padding: 12px;
+  border-radius: 4px;
+  resize: vertical;
+  top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.header .text-password {
+  position: absolute;
+  right: 190px;
+  max-width: 200px;
+  width: auto;
+  height: 20px;
+  padding: 12px;
+  border-radius: 4px;
+  resize: vertical;
+  top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+.header .headline {
+  padding: 3px 0 3px 0;
+  font-weight: bold;
+  font-size: 45px;
+}
+
+.header .login {
+  position: absolute;
+  right: 190px;
+  max-width: 200px;
+  width: auto;
+  height: 20px;
+  padding: 12px;
+  border-radius: 4px;
+  resize: vertical;
+  top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.header .regestrieren {
+  position: absolute;
+  right: 190px;
+  max-width: 200px;
+  width: auto;
+  height: 20px;
+  padding: 12px;
+  border-radius: 4px;
+  resize: vertical;
+  top: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  background-color: #4CAF50;
+  /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.mymember .headline2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  background: rgba(139, 35, 35, 0.5);
+}
+
+.mymember .headline2 .subheadline {
+  font-size: 20px;
+  padding-left: 50px;
+}
+
+.mymember .list-item {
+  background-color: white;
+  height: 60px;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  padding-left: 30px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  max-width: 100%;
+  padding-right: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.mymember .list-item .delete {
+  max-width: 180px;
+  width: auto;
+  padding: 10px;
+  background: red;
+  text-align: center;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  color: black;
+  position: absolute;
+  right: 15px;
+  border-radius: 10px;
+  color: white;
+}
+
+.mymember .list-item .update {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+  -webkit-padding-start: 15px;
+          padding-inline-start: 15px;
+}
+
+.mymember .list-item .update li {
+  list-style-type: none;
+}
+
+.mymember .list-item .update .link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 10px;
+}
+
+.mymember .list-item .update .inhalt:first-child {
+  padding-left: 10px;
+}
+
+.mymember .list-item .update .inhalt {
+  max-width: 200px;
+  width: 110px;
+  color: black;
+}
+
+.mymember .list-item .delete:hover {
+  text-decoration: none;
+}
+
+.mymember .list-item a {
+  color: white;
+  text-decoration: none;
+}
+
+.member {
+  margin-left: 20px;
+  max-width: 180px;
+  width: auto;
+  margin-top: 30px;
+  padding: 5px;
+  text-align: center;
+  background: blue;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+
+.member a {
+  text-decoration: none;
+  color: white;
+}
+
+.member a:hover {
+  text-decoration: none;
+}
+
+.update2 {
+  padding-top: 20px;
+  padding-left: 25px;
+}
+
+.update2 .beschreibung {
+  max-width: 30px;
+  width: 100%;
+}
+
+.update2 .name {
+  max-width: 200px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.update2 .menge {
+  max-width: 200px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.update2 .color {
+  max-width: 200px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.update2 .cost {
+  max-width: 200px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.update2 .member2 {
+  max-width: 180px;
+  width: auto;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid;
+  text-align: center;
+  background: green;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.update2 .member2:hover {
+  cursor: pointer;
+}
+
+.update2 .zurueck {
+  max-width: 180px;
+  width: auto;
+  padding: 10px 20px 10px 20px;
+  text-align: center;
+  background: blue;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 12px;
+}
+
+.update2 a {
+  font-size: 14px;
+  color: white;
+}
+
+.update2 .zurueck:hover {
+  text-decoration: none;
+}
+
+.add {
+  margin-top: 10px;
+  margin-left: 25px;
+}
+
+.add .beschreibung {
+  max-width: 30px;
+  width: 100%;
+}
+
+.add .name {
+  max-width: 200px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.add .menge {
+  max-width: 200px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.add .color {
+  max-width: 200px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.add .cost {
+  max-width: 200px;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+.add .member2 {
+  max-width: 180px;
+  width: auto;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid;
+  text-align: center;
+  background: green;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+.add .member2:hover {
+  cursor: pointer;
+}
+
+.add .zurueck {
+  max-width: 180px;
+  width: auto;
+  padding: 10px 20px 10px 20px;
+  border: 1px solid;
+  text-align: center;
+  background: blue;
+  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
+  text-decoration: none;
+  border-radius: 10px;
+  font-size: 14px;
+}
+
+.add a {
+  font-size: 14px;
+  color: white;
+}
+
+.add .zurueck:hover {
+  text-decoration: none;
+}
+/*# sourceMappingURL=style.css.map */
