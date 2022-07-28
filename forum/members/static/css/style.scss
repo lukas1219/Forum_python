@@ -4,6 +4,7 @@ $red: red;
 $blue: blue;
 $white: white;
 $green: green;
+$dark-gray: #838b8b;
 body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -12,352 +13,174 @@ body{
 }
 .header{
     background: $header;
-    display: flex;
-    padding-left: 45px;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 60px;
-    #benutzer{
-        position: absolute;
-        right: 300px;
-        max-width:200px;
-        width: auto;
-        height: 15px;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-        top: 10px;
-        display: flex;
-        justify-content: right;
-    }
-    #password{
-        position: absolute;
-        right: 15px;
-        max-width:200px;
-        width: auto;
-        height: 15px;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-        top: 10px;
-        display: flex;
-        justify-content: right;
-    }
-    .text-benutzer{
-        position: absolute;
-        right: 480px;
-        max-width:200px;
-        width: auto;
-        height: 20px;
-        padding: 12px;
-        border-radius: 4px;
-        resize: vertical;
-        top: 10px;
-        display: flex;
-        justify-content: right;
-    }
-    .text-password{
-        position: absolute;
-        right: 190px;
-        max-width:200px;
-        width: auto;
-        height: 20px;
-        padding: 12px;
-        border-radius: 4px;
-        resize: vertical;
-        top: 10px;
-        display: flex;
-        justify-content: right;
-    }
+    height: 350px;
     .headline{
-        padding: 3px 0 3px 0;
+        margin-left: 45px;
+        padding: 10px 0 4px 0;
         font-weight: bold;
-        font-size: 45px;
-    }
-    .login{
-        position: absolute;
-        right: 190px;
-        max-width:200px;
-        width: auto;
-        height: 20px;
-        padding: 12px;
-        border-radius: 4px;
-        resize: vertical;
-        top: 10px;
-        display: flex;
-        justify-content: right;
-        background-color: #4CAF50; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
+        font-size: 30px;
         text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
     }
-    .regestrieren{
-        position: absolute;
-        right: 190px;
-        max-width:200px;
-        width: auto;
-        height: 20px;
-        padding: 12px;
-        border-radius: 4px;
-        resize: vertical;
-        top: 10px;
-        display: flex;
-        justify-content: right;
-        background-color: #4CAF50; /* Green */
-        border: none;
-        color: white;
-        padding: 15px 32px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 16px;
-    }
-
-}
-
-.mymember{
-    .headline2{
-        display: flex;
-        align-items: center;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        background: rgba($header, 0.5);
-        .subheadline{
-            font-size: 20px;
-            padding-left: 50px;
-            
+    .menu{
+        .line{
+            width: 100%;
+            border-top: 3px solid $dark-gray;
         }
-    }
-    
-    .list-item {
-        background-color: white;
-        height: 60px;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-        padding-left: 30px;
-        border-top: 1px solid rgba(0, 0, 0, 0.1);
-        max-width: 100%;
-        padding-right: 10px;
-        align-items: center;
-        .delete{
-            max-width: 180px;
-            width: auto;
+        #benutzer{
+            width: 100%;
+            height: 15px;
+            padding: 12px 0 12px 0;
+            resize: vertical;
+            border-width: 0;
+        }
+        #password{
+            width: 100%;
+            height: 15px;
+            padding: 12px 0 12px 0;
+            resize: vertical;
+            border-width: 0;
+        }
+        ::placeholder{
+            padding-left: 10px;
+        }
+        .text-benutzer{
+            width: 100%;
+            height: 20px;
+            padding: 12px 0 12px 10px;
+            resize: vertical;
+            background-color: $dark-gray;
+        }
+        .text-password{
+            width: 100%;
+            height: 20px;
+            padding: 12px 0 12px 10px;
+            resize: vertical;
+            background-color: $dark-gray;
+        }
+        
+        .login{
+            width: 100%;
             padding: 10px;
-            background: $red;
-            text-align: center;
-            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-            text-decoration: none;
-            color: black;
-            position: absolute;
-            right: 15px;
-            border-radius: 10px;
+            resize: vertical;
+            display: flex;
+            background-color: #4CAF50; 
+            border: none;
             color: white;
+            text-decoration: none;
+            font-size: 16px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        .regestrieren{
+            width: 100%;
+            padding: 10px;
+            resize: vertical;
+            display: flex;
+            background-color: #4CAF50; 
+            border: none;
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+    }
+    @media only screen and (min-width: 1000px){
+        display: flex;
+        height: 60px;
+        padding-left: 0;
+        margin-left: 0;
+        .headline{
+            margin-left: 30px;
+            padding: 9px 0 3px 0;
+            font-weight: bold;
+            font-size: 35px;
+            text-align: left;
+        }
+        .menu{
+            #benutzer{
+                max-width:200px;
+                position: absolute;
+                top: 10px;
+                right: 550px;
+                display: flex;
+                justify-content: right;
+                width: auto;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            #password{
+                max-width:200px;
+                position: absolute;
+                top: 10px;
+                right: 280px;
+                display: flex;
+                justify-content: right;
+                width: auto;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .text-benutzer{
+                background: none;
+                max-width:200px;
+                position: absolute;
+                top: 10px;
+                right: 740px;
+                display: flex;
+                justify-content: right;
+                width: auto;
+            }
+            .text-password{
+                background: none;
+                max-width:200px;
+                position: absolute;
+                top: 10px;
+                right: 450px;
+                display: flex;
+                justify-content: right;
+                width: auto;
+            }
+            
+            .login{
+                max-width:200px;
+                position: absolute;
+                top: 10px;
+                right: 160px;
+                display: flex;
+                justify-content: right;
+                width: auto;
+                margin-top: 0;
+                margin-bottom: 0;
+                border-radius: 4px;
+            }
+            .regestrieren{
+                max-width:200px;
+                position: absolute;
+                top: 10px;
+                right: 15px;
+                display: flex;
+                justify-content: right;
+                width: auto;
+                border-radius: 4px;
+            }
             
         }
-        .update{
-            display: flex;
-            margin-top: 10px;
-            padding-inline-start: 15px;
-            li{
-                list-style-type: none;
-                
-            }
-           .link{
-            display: flex;
-            align-items: center;
-            padding-top: 10px;
-        
-           }
-            .inhalt:first-child{
-                padding-left: 10px;
-            }
-            .inhalt{
-                //margin-left: 50px;
-                max-width: 200px;
-                width: 110px;
-                color: black;
-            }
+    }
+    @media only screen and (min-width: 1200px){
+        .headline{
+            margin-top: 0;
+            font-size: 45px;
+            padding: 3px 0 3px 0;
         }
-       
-        .delete:hover{
-            text-decoration: none;
-        }
-        a{
-            color: $white;
-            text-decoration: none;
+        .menu{            
+            .login{
+                right: 180px;
+            }
+            .regestrieren{
+                right: 50px;
+            }
+            
         }
     }
 }
-.member{
-    margin-left: 20px;
-    max-width: 180px;
-    width: auto;
-    margin-top: 30px;
-    padding: 5px;
-    text-align: center;
-    background: $blue;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-    border-radius: 10px;
-    a{
-        text-decoration: none;
-        color: $white;
-    }
-    a:hover{
-        text-decoration: none;
-    }
-}
-.update2{
-    padding-top: 20px;
-    padding-left: 25px;
-    .beschreibung{
-        max-width: 30px;
-        width: 100%;
-    }
-    .name{
-        max-width:200px;
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-    }
-    .menge{
-        max-width:200px;
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-    }
-    .color{
-        max-width:200px;
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-    }
-    .cost{
-        max-width:200px;
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-    }
-    .member2{
-        max-width: 180px;
-        width: auto;
-        padding: 10px 20px 10px 20px;
-        border: 1px solid ;
-        text-align: center;
-        background: $green;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        color:$white;
-        cursor: pointer;
-    }
-    .member2:hover{
-        cursor: pointer;
-    }
-    .zurueck{
-        max-width: 180px;
-        width: auto;
-        padding: 10px 20px 10px 20px;
-        text-align: center;
-        background: $blue;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-        text-decoration: none;
-        border-radius: 10px;
-        font-size: 12px;
-    }
-    a{
-        font-size: 14px;
-        color: $white;
-    }
-    .zurueck:hover{
-        text-decoration: none;
-    }
-}
-.add{
-    margin-top: 10px;
-    margin-left: 25px;
-    .beschreibung{
-        max-width: 30px;
-        width: 100%;
-    }
-    .name{
-        max-width:200px;
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-    }
-    .menge{
-        max-width:200px;
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-    }
-    .color{
-        max-width:200px;
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-    }
-    .cost{
-        max-width:200px;
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        border-radius: 4px;
-        resize: vertical;
-    }
-    .member2{
-        max-width: 180px;
-        width: auto;
-        padding: 10px 20px 10px 20px;
-        border: 1px solid ;
-        text-align: center;
-        background: $green;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-        color:$white;
-        cursor: pointer;
-        
-    }
-    .member2:hover{
-        cursor: pointer;
-    }
-    .zurueck{
-        max-width: 180px;
-        width: auto;
-        padding: 10px 20px 10px 20px;
-        border: 1px solid ;
-        text-align: center;
-        background: $blue;
-        box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-        text-decoration: none;
-        border-radius: 10px;
-        font-size: 14px;
-    }
-    a{
-        font-size: 14px;
-        color: $white;
-    }
-    .zurueck:hover{
-        text-decoration: none;
-    }
-}
-
 

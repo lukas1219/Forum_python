@@ -7,431 +7,220 @@ body {
 
 .header {
   background: #8b2323;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  padding-left: 45px;
   -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
           box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   width: 100%;
-  height: 60px;
-}
-
-.header #benutzer {
-  position: absolute;
-  right: 300px;
-  max-width: 200px;
-  width: auto;
-  height: 15px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-  top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-}
-
-.header #password {
-  position: absolute;
-  right: 15px;
-  max-width: 200px;
-  width: auto;
-  height: 15px;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-  top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-}
-
-.header .text-benutzer {
-  position: absolute;
-  right: 480px;
-  max-width: 200px;
-  width: auto;
-  height: 20px;
-  padding: 12px;
-  border-radius: 4px;
-  resize: vertical;
-  top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-}
-
-.header .text-password {
-  position: absolute;
-  right: 190px;
-  max-width: 200px;
-  width: auto;
-  height: 20px;
-  padding: 12px;
-  border-radius: 4px;
-  resize: vertical;
-  top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
+  height: 350px;
 }
 
 .header .headline {
-  padding: 3px 0 3px 0;
+  margin-left: 45px;
+  padding: 10px 0 4px 0;
   font-weight: bold;
-  font-size: 45px;
+  font-size: 30px;
+  text-align: center;
 }
 
-.header .login {
-  position: absolute;
-  right: 190px;
-  max-width: 200px;
-  width: auto;
-  height: 20px;
-  padding: 12px;
-  border-radius: 4px;
+.header .menu .line {
+  width: 100%;
+  border-top: 3px solid #838b8b;
+}
+
+.header .menu #benutzer {
+  width: 100%;
+  height: 15px;
+  padding: 12px 0 12px 0;
   resize: vertical;
-  top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  background-color: #4CAF50;
-  /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  border-width: 0;
 }
 
-.header .regestrieren {
-  position: absolute;
-  right: 190px;
-  max-width: 200px;
-  width: auto;
-  height: 20px;
-  padding: 12px;
-  border-radius: 4px;
+.header .menu #password {
+  width: 100%;
+  height: 15px;
+  padding: 12px 0 12px 0;
   resize: vertical;
-  top: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: right;
-      -ms-flex-pack: right;
-          justify-content: right;
-  background-color: #4CAF50;
-  /* Green */
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
+  border-width: 0;
 }
 
-.mymember .headline2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  background: rgba(139, 35, 35, 0.5);
-}
-
-.mymember .headline2 .subheadline {
-  font-size: 20px;
-  padding-left: 50px;
-}
-
-.mymember .list-item {
-  background-color: white;
-  height: 60px;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  padding-left: 30px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  max-width: 100%;
-  padding-right: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-.mymember .list-item .delete {
-  max-width: 180px;
-  width: auto;
-  padding: 10px;
-  background: red;
-  text-align: center;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  color: black;
-  position: absolute;
-  right: 15px;
-  border-radius: 10px;
-  color: white;
-}
-
-.mymember .list-item .update {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
-  -webkit-padding-start: 15px;
-          padding-inline-start: 15px;
-}
-
-.mymember .list-item .update li {
-  list-style-type: none;
-}
-
-.mymember .list-item .update .link {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-top: 10px;
-}
-
-.mymember .list-item .update .inhalt:first-child {
+.header .menu ::-webkit-input-placeholder {
   padding-left: 10px;
 }
 
-.mymember .list-item .update .inhalt {
-  max-width: 200px;
-  width: 110px;
-  color: black;
+.header .menu :-ms-input-placeholder {
+  padding-left: 10px;
 }
 
-.mymember .list-item .delete:hover {
-  text-decoration: none;
+.header .menu ::-ms-input-placeholder {
+  padding-left: 10px;
 }
 
-.mymember .list-item a {
+.header .menu ::placeholder {
+  padding-left: 10px;
+}
+
+.header .menu .text-benutzer {
+  width: 100%;
+  height: 20px;
+  padding: 12px 0 12px 10px;
+  resize: vertical;
+  background-color: #838b8b;
+}
+
+.header .menu .text-password {
+  width: 100%;
+  height: 20px;
+  padding: 12px 0 12px 10px;
+  resize: vertical;
+  background-color: #838b8b;
+}
+
+.header .menu .login {
+  width: 100%;
+  padding: 10px;
+  resize: vertical;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #4CAF50;
+  border: none;
   color: white;
   text-decoration: none;
-}
-
-.member {
-  margin-left: 20px;
-  max-width: 180px;
-  width: auto;
-  margin-top: 30px;
-  padding: 5px;
-  text-align: center;
-  background: blue;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-}
-
-.member a {
-  text-decoration: none;
-  color: white;
-}
-
-.member a:hover {
-  text-decoration: none;
-}
-
-.update2 {
-  padding-top: 20px;
-  padding-left: 25px;
-}
-
-.update2 .beschreibung {
-  max-width: 30px;
-  width: 100%;
-}
-
-.update2 .name {
-  max-width: 200px;
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.update2 .menge {
-  max-width: 200px;
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.update2 .color {
-  max-width: 200px;
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.update2 .cost {
-  max-width: 200px;
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.update2 .member2 {
-  max-width: 180px;
-  width: auto;
-  padding: 10px 20px 10px 20px;
-  border: 1px solid;
-  text-align: center;
-  background: green;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
-  color: white;
-  cursor: pointer;
-}
-
-.update2 .member2:hover {
-  cursor: pointer;
-}
-
-.update2 .zurueck {
-  max-width: 180px;
-  width: auto;
-  padding: 10px 20px 10px 20px;
-  text-align: center;
-  background: blue;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  text-decoration: none;
-  border-radius: 10px;
-  font-size: 12px;
-}
-
-.update2 a {
-  font-size: 14px;
-  color: white;
-}
-
-.update2 .zurueck:hover {
-  text-decoration: none;
-}
-
-.add {
+  font-size: 16px;
   margin-top: 10px;
-  margin-left: 25px;
+  margin-bottom: 10px;
 }
 
-.add .beschreibung {
-  max-width: 30px;
+.header .menu .regestrieren {
   width: 100%;
-}
-
-.add .name {
-  max-width: 200px;
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 10px;
   resize: vertical;
-}
-
-.add .menge {
-  max-width: 200px;
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.add .color {
-  max-width: 200px;
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.add .cost {
-  max-width: 200px;
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  resize: vertical;
-}
-
-.add .member2 {
-  max-width: 180px;
-  width: auto;
-  padding: 10px 20px 10px 20px;
-  border: 1px solid;
-  text-align: center;
-  background: green;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-  border-radius: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #4CAF50;
+  border: none;
   color: white;
-  cursor: pointer;
-}
-
-.add .member2:hover {
-  cursor: pointer;
-}
-
-.add .zurueck {
-  max-width: 180px;
-  width: auto;
-  padding: 10px 20px 10px 20px;
-  border: 1px solid;
-  text-align: center;
-  background: blue;
-  -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
-          box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
   text-decoration: none;
-  border-radius: 10px;
-  font-size: 14px;
+  font-size: 16px;
 }
 
-.add a {
-  font-size: 14px;
-  color: white;
+@media only screen and (min-width: 1000px) {
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    height: 60px;
+    padding-left: 0;
+    margin-left: 0;
+  }
+  .header .headline {
+    margin-left: 30px;
+    padding: 9px 0 3px 0;
+    font-weight: bold;
+    font-size: 35px;
+    text-align: left;
+  }
+  .header .menu #benutzer {
+    max-width: 200px;
+    position: absolute;
+    top: 10px;
+    right: 550px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    width: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .header .menu #password {
+    max-width: 200px;
+    position: absolute;
+    top: 10px;
+    right: 280px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    width: auto;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .header .menu .text-benutzer {
+    background: none;
+    max-width: 200px;
+    position: absolute;
+    top: 10px;
+    right: 740px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    width: auto;
+  }
+  .header .menu .text-password {
+    background: none;
+    max-width: 200px;
+    position: absolute;
+    top: 10px;
+    right: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    width: auto;
+  }
+  .header .menu .login {
+    max-width: 200px;
+    position: absolute;
+    top: 10px;
+    right: 160px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    width: auto;
+    margin-top: 0;
+    margin-bottom: 0;
+    border-radius: 4px;
+  }
+  .header .menu .regestrieren {
+    max-width: 200px;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: right;
+        -ms-flex-pack: right;
+            justify-content: right;
+    width: auto;
+    border-radius: 4px;
+  }
 }
 
-.add .zurueck:hover {
-  text-decoration: none;
+@media only screen and (min-width: 1200px) {
+  .header .headline {
+    margin-top: 0;
+    font-size: 45px;
+    padding: 3px 0 3px 0;
+  }
+  .header .menu .login {
+    right: 180px;
+  }
+  .header .menu .regestrieren {
+    right: 50px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
