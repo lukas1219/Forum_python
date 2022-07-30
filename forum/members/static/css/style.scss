@@ -4,7 +4,8 @@ $red: red;
 $blue: blue;
 $white: white;
 $green: green;
-$dark-gray: #838b8b;
+$white-gray: #838b8b;
+$dark-gray: #696969;
 body{
     margin: 0;
     font-family: 'Open Sans', sans-serif;
@@ -15,7 +16,7 @@ body{
     background: $header;
     box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1);
     width: 100%;
-    height: 350px;
+    height: 300px;
     .headline{
         margin-left: 45px;
         padding: 10px 0 4px 0;
@@ -50,14 +51,14 @@ body{
             height: 20px;
             padding: 12px 0 12px 10px;
             resize: vertical;
-            background-color: $dark-gray;
+            background-color: $white-gray;
         }
         .text-password{
             width: 100%;
             height: 20px;
             padding: 12px 0 12px 10px;
             resize: vertical;
-            background-color: $dark-gray;
+            background-color: $white-gray;
         }
         
         .login{
@@ -70,12 +71,11 @@ body{
             color: white;
             text-decoration: none;
             font-size: 16px;
-            margin-top: 10px;
-            margin-bottom: 10px;
+            
         }
-        .regestrieren{
+        .registrierung{
             width: 100%;
-            padding: 10px;
+            padding: 10px 15px 10px 15px;
             resize: vertical;
             display: flex;
             background-color: #4CAF50; 
@@ -98,6 +98,9 @@ body{
             text-align: left;
         }
         .menu{
+            .line{
+                display: none;
+            }
             #benutzer{
                 max-width:200px;
                 position: absolute;
@@ -153,7 +156,7 @@ body{
                 margin-bottom: 0;
                 border-radius: 4px;
             }
-            .regestrieren{
+            .registrierung{
                 max-width:200px;
                 position: absolute;
                 top: 10px;
@@ -176,11 +179,93 @@ body{
             .login{
                 right: 180px;
             }
-            .regestrieren{
+            .registrierung{
                 right: 50px;
             }
             
         }
     }
 }
-
+.container{
+    max-width: 1530px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    .regestrieren{
+        margin-top: 15px;
+        .benutzer{
+            display: flex;
+            .benutzer{
+                max-width: 200px;
+                width: 200px;;
+            }
+            #benutzername{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .e-mail{
+                max-width: 200px;
+                width: 200px;
+                padding-left: 10px;
+            }
+            #e-mail{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        }
+        .name{
+            display: flex;
+            .first-name{
+                max-width: 200px;
+                width: 200px;
+            }
+            #first-name{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .second-name{
+                max-width: 200px;
+                width: 200px;
+                padding-left: 10px;
+            }
+            #second-name{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        }
+        .password-abfrage{
+            display: flex;
+            .password{
+                max-width: 200px;
+                width: 200px;
+            }
+            #password{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+            .repeat-password{
+                max-width: 200px;
+                width: 200px;
+                padding-left: 10px;
+            }
+            #repeat-password{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+            }
+        }
+        
+    }
+}

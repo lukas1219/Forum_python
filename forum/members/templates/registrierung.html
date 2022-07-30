@@ -1,0 +1,40 @@
+{% load static %}
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Regestrieren</title>
+        <link rel="icon" type="favicon/favicon.ico" href="favicon.ico">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    </head>
+    <div class="header">
+        <div class="headline">Registrierung</div>
+    </div>
+    <body>
+        <div class="container">
+            <form class="regestrieren">
+                <div class="benutzer">
+                    <div class="benutzer">Benutzername</div>
+                    <input class="w3-input w3-border w3-round-large" id="benutzername"  placeholder="Benutzername" aria-label="user">
+                    <div class="e-mail">E-Mail</div>
+                    <input class="w3-input w3-border w3-round-large" id="e-mail"  placeholder="E-Mail" aria-label="e-mail">
+                </div>
+                <div class="name">
+                    <div class="first-name">Vorname</div>
+                    <input class="w3-input w3-border w3-round-large" id="first-name"  placeholder="Vorname" aria-label="first-name">
+                    <div class="second-name">Nachname</div>
+                    <input class="w3-input w3-border w3-round-large" id="second-name"  placeholder="Nachname" aria-label="scond-name">
+                </div>
+                <div class="password-abfrage">
+                    <div class="password">Passwort</div>
+                    <input class="w3-input w3-border w3-round-large" id="password"  placeholder="Passwort" aria-label="password">
+                    <div class="repeat-password">Passwort wiederholen</div>
+                    <input class="w3-input w3-border w3-round-large" id="repeat-password"  placeholder="Passwort wiederholen" aria-label="repeat password">
+                </div>
+                <div class="line"></div>
+                <input type="submit" class="Registrierung" value="Registrierung">
+                <a href="/members" class="zurück">Zurück</a>
+            </form> 
+        </div>
+    </body>
+</html>
