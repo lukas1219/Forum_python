@@ -192,6 +192,8 @@ body{
     margin-right: auto;
     padding-left: 15px;
     padding-right: 15px;
+    display: flex;
+    justify-content: center;
     .regestrieren{
         margin-top: 15px;
         .benutzer{
@@ -205,41 +207,45 @@ body{
                 width: 200px;
                 border: 1px solid #ccc;
                 border-radius: 4px;
+                height: 30px;
             }
-            .e-mail{
+            .email{
                 max-width: 200px;
                 width: 200px;
                 padding-left: 10px;
             }
-            #e-mail{
+            #email{
                 max-width:200px;
                 width: 200px;
                 border: 1px solid #ccc;
                 border-radius: 4px;
+                height: 30px;
             }
         }
         .name{
             display: flex;
-            .first-name{
+            .firstname{
                 max-width: 200px;
                 width: 200px;
             }
-            #first-name{
+            #firstname{
                 max-width:200px;
                 width: 200px;
                 border: 1px solid #ccc;
                 border-radius: 4px;
+                height: 30px;
             }
-            .second-name{
+            .lastname{
                 max-width: 200px;
                 width: 200px;
                 padding-left: 10px;
             }
-            #second-name{
+            #lastname{
                 max-width:200px;
                 width: 200px;
                 border: 1px solid #ccc;
                 border-radius: 4px;
+                height: 30px;
             }
         }
         .password-abfrage{
@@ -253,17 +259,19 @@ body{
                 width: 200px;
                 border: 1px solid #ccc;
                 border-radius: 4px;
+                height: 30px;
             }
-            .repeat-password{
+            .repeatpassword{
                 max-width: 200px;
                 width: 200px;
                 padding-left: 10px;
             }
-            #repeat-password{
+            #repeatpassword{
                 max-width:200px;
                 width: 200px;
                 border: 1px solid #ccc;
                 border-radius: 4px;
+                height: 30px;
             }
         }
         

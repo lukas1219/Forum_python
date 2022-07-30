@@ -231,6 +231,12 @@ body {
   margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .container .regestrieren {
@@ -253,19 +259,21 @@ body {
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 30px;
 }
 
-.container .regestrieren .benutzer .e-mail {
+.container .regestrieren .benutzer .email {
   max-width: 200px;
   width: 200px;
   padding-left: 10px;
 }
 
-.container .regestrieren .benutzer #e-mail {
+.container .regestrieren .benutzer #email {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 30px;
 }
 
 .container .regestrieren .name {
@@ -274,29 +282,31 @@ body {
   display: flex;
 }
 
-.container .regestrieren .name .first-name {
+.container .regestrieren .name .firstname {
   max-width: 200px;
   width: 200px;
 }
 
-.container .regestrieren .name #first-name {
+.container .regestrieren .name #firstname {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 30px;
 }
 
-.container .regestrieren .name .second-name {
+.container .regestrieren .name .lastname {
   max-width: 200px;
   width: 200px;
   padding-left: 10px;
 }
 
-.container .regestrieren .name #second-name {
+.container .regestrieren .name #lastname {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 30px;
 }
 
 .container .regestrieren .password-abfrage {
@@ -315,18 +325,20 @@ body {
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 30px;
 }
 
-.container .regestrieren .password-abfrage .repeat-password {
+.container .regestrieren .password-abfrage .repeatpassword {
   max-width: 200px;
   width: 200px;
   padding-left: 10px;
 }
 
-.container .regestrieren .password-abfrage #repeat-password {
+.container .regestrieren .password-abfrage #repeatpassword {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
+  height: 30px;
 }
 /*# sourceMappingURL=style.css.map */
