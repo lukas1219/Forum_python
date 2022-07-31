@@ -8,3 +8,7 @@ def index(request):
 def registrierung(request):
     template = loader.get_template('registrierung.html')
     return HttpResponse(template.render({}, request))
+  
+def profil(request):
+    template = loader.get_template('profil.html')
+    return HttpResponse(template.render({}, request))  

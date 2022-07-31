@@ -1,7 +1,6 @@
 from django.db import models
 
 class registieren(models.Model):
-    
     benutzername = models.CharField(max_length=255)
     email = models.CharField(max_length=255)
     firstname = models.CharField(max_length=255)
