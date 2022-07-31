@@ -109,6 +109,16 @@ body {
   margin-right: auto;
 }
 
+.header .container .main-left {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  border-left: 3px solid #838b8b;
+}
+
 .header .container .main-left ul li {
   list-style: none;
 }

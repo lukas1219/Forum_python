@@ -91,6 +91,9 @@ body{
         margin-left: auto;
         margin-right: auto;
         .main-left{
+            display: flex;
+            justify-content: left;
+            border-left: 3px solid #838b8b ;
             ul{
                 li{
                     list-style: none;
