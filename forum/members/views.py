@@ -17,11 +17,11 @@ def profil(request):
     template = loader.get_template('profil.html')
     return HttpResponse(template.render({}, request))  
   
-def index(request):
-  mymembers = registieren.objects.all().values()
-  template = loader.get_template('index.html')
+def profil(request):
+  profil = registieren.objects.all().values()
+  template = loader.get_template('profil.html')
   context = {
-    'mymembers': mymembers,
+    'profil': profil,
   }
   return HttpResponse(template.render(context, request))
 
