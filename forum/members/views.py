@@ -32,6 +32,6 @@ def addrecord(request):
   x = request.POST['lastname']
   y = request.POST['password']
   z = request.POST['repeatpassword']
-  profil = registieren(benutzername=u, email=v, firstname=w, lastname=x, password=y, repeatpassword=z)
-  profil.save()
+  daten = registieren(benutzername=u, email=v, firstname=w, lastname=x, password=y, repeatpassword=z)
+  daten.save()
   return HttpResponseRedirect(reverse('index'))

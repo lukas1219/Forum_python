@@ -12,19 +12,20 @@
     <div class="header">
         <div class="headline">Profil</div>
     </div>
-
-    <table border="1">
-        {% for x in registieren %}
-        <tr>
-            <td>{{ x.benutzername }}</td>
-            <td>{{ x.email }}</td>
-            <td>{{ x.firstname }}</td>
-            <td>{{ x.lastname }}</td>
-            <td>{{ x.password }}</td>
-            <td>{{ x.theaseranswer }}</td>
-        </tr>
-        {% endfor %}
-        
-
+    <div class="container">
+        <table border="1">
+            {% for x in registieren %}
+            <tr>
+                <td>{{ x.benutzername }}</td>
+                <td>{{ x.email }}</td>
+                <td>{{ x.firstname }}</td>
+                <td>{{ x.lastname }}</td>
+                <td>{{ x.password }}</td>
+                <td>{{ x.theaseranswer }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        <a href="/members" class="zurück">Zurück</a>
+    </div>
 </body>
 </html>
