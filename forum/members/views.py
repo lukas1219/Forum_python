@@ -1,7 +1,8 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
-from .models import Members
+from .models import registieren
+from .models import forum
 
 
 def index(request):
@@ -17,7 +18,7 @@ def profil(request):
     return HttpResponse(template.render({}, request))  
   
 def index(request):
-  mymembers = Members.objects.all().values()
+  mymembers = registieren.objects.all().values()
   template = loader.get_template('index.html')
   context = {
     'mymembers': mymembers,
@@ -31,6 +32,6 @@ def addrecord(request):
   x = request.POST['lastname']
   y = request.POST['password']
   z = request.POST['repeatpassword']
-  member = Members(benutzername=u, email=v, firstname=w, lastname=x, password=y, repeatpassword=z)
+  member = registieren(benutzername=u, email=v, firstname=w, lastname=x, password=y, repeatpassword=z)
   member.save()
   return HttpResponseRedirect(reverse('index'))
