@@ -1,5 +1,5 @@
 from django.db import models
-from django.db import date
+from datetime import date
 
 class registieren(models.Model):
     benutzername = models.CharField(max_length=255)
@@ -14,8 +14,9 @@ class registieren(models.Model):
     
 class forum(models.Model):
     created_at = models.DateField(default=date.today)
+    headline = models.CharField(max_length=255)
     theaser = models.CharField(max_length=255)
     theaseranswer = models.CharField(max_length=255)
     
     def __str__(self):
-        return str(self.id) + ' ' + self.created_at + ' ' + self.theaser + ' ' + self.theaseranswer
+        return str(self.id) + ' ' + self.created_at + ' ' + self.headline + ' ' + self.theaser + ' ' + self.theaseranswer

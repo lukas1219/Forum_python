@@ -1,6 +1,5 @@
 {% load static %}
 <html>
-<head>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,12 +7,24 @@
         <link rel="icon" type="favicon/favicon.ico" href="favicon.ico">
         <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
     </head>
+
+<body>
     <div class="header">
         <div class="headline">Profil</div>
     </div>
-</head>
 
+    <table border="1">
+        {% for x in mymembers %}
+        <tr>
+            <td>{{ x.benutzername }}</td>
+            <td>{{ x.email }}</td>
+            <td>{{ x.firstname }}</td>
+            <td>{{ x.lastname }}</td>
+            <td>{{ x.password }}</td>
+            <td>{{ x.theaseranswer }}</td>
+        </tr>
+        {% endfor %}
+        
 
-
-
+</body>
 </html>
