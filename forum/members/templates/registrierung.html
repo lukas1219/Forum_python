@@ -12,7 +12,8 @@
     </div>
     <body>
         <div class="container">
-            <form class="regestrieren">
+            <form class="regestrieren" action="addrecord/" method="post">
+                {% csrf_token %}
                 <div class="benutzer">
                     <div class="benutzer">Benutzername</div>
                     <input class="w3-input w3-border w3-round-large" id="benutzername"  placeholder="Benutzername" aria-label="user">
