@@ -12,5 +12,30 @@
         <div class="header">
             <div class="headline">Profil bearbeiten</div>
         </div>
+        <div class="container">
+            <form class="profileding" action="updaterecord/{{ profil.id }}" method="post">
+                {% csrf_token %}
+                <div class="menge_angabe" id="inputGroup-sizing-default">Benutzername:</div>
+                <input type="text" class="benutzername" name="benutzername" value="{{ profil.benutzername }}">
+                <br><br>
+                <div class="beschreibung" id="inputGroup-sizing-default">E-Mail:</div>
+                <input type="text" class="email" name="email" value="{{ profil.email }}">
+                <br><br>
+                <div class="beschreibung" id="inputGroup-sizing-default">Vorname:</div>
+                <input type="text" class="firstname" name="firstname" value="{{ profil.firstname }}">
+                <br><br>
+                <div class="beschreibung" id="inputGroup-sizing-default">Nachname</div>
+                <input type="text" class="lastname" name="lastname" value="{{ post.lastname }}">
+                <br><br>
+                <div class="beschreibung" id="inputGroup-sizing-default">Passwort</div>
+                <input type="text" class="password" name="password" value="{{ post.password }}">
+                <br><br>
+                <div class="beschreibung" id="inputGroup-sizing-default">Passwort wiederholen</div>
+                <input type="text" class="repeatpassword" name="repeatpassword" value="{{ post.repeatpassword }}">
+                <br><br>
+                <a href="/members" class="zurueck">Zurück</a>
+                <input type="submit" class="eding" value="Update">
+            </form>
+        </div>
     </body>
 </html>

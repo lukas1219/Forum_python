@@ -38,5 +38,21 @@ def addrecord(request):
   z = request.POST['repeatpassword']
   daten = registieren(benutzername=u, email=v, firstname=w, lastname=x, password=y, repeatpassword=z)
   daten.save()
-  return HttpResponseRedirect(reverse('profil'))
+  return HttpResponseRedirect(reverse('index'))
 
+def updaterecord(request, id):
+    benutzername = request.POST['benutzername']
+    email = request.POST['email']
+    firstname = request.POST['firstname']
+    lastname = request.POST['lastname']
+    password = request.POST['password']
+    repeatpassword = request.POST['repeatpassword']
+    profil = profil.objects.get(id=id)
+    profil.benutzername = benutzername
+    profil.email = email
+    profil.firstname = firstname
+    profil.lastname = lastname
+    profil.password = password
+    profil.repeatpassword = repeatpassword
+    profil.save()
+    return HttpResponseRedirect(reverse('profil'))
