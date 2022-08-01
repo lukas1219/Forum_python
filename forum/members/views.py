@@ -17,6 +17,10 @@ def profil(request):
     template = loader.get_template('profil.html')
     return HttpResponse(template.render({}, request))  
   
+def update(request):
+    template = loader.get_template('profil_bearbeiten.html')
+    return HttpResponse(template.render({}, request))  
+  
 def profil(request):
   profil = registieren.objects.all().values()
   template = loader.get_template('profil.html')
