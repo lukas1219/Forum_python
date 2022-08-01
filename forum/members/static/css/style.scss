@@ -304,11 +304,11 @@ body{
 
 .container{
     .update{
-        li{
-            list-style: none;
-            .profil{
-                display: flex;
-            }
+        .profil{
+            font-weight: bold;
+        }
+        .inhalt{
+            font-weight: normal;
         }
     }
 }

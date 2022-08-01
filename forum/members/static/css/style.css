@@ -366,13 +366,11 @@ body {
   height: 30px;
 }
 
-.container .update li {
-  list-style: none;
+.container .update .profil {
+  font-weight: bold;
 }
 
-.container .update li .profil {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.container .update .inhalt {
+  font-weight: normal;
 }
 /*# sourceMappingURL=style.css.map */

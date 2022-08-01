@@ -14,18 +14,18 @@
     </div>
     <div class="container">
         <div class="profil">
-            <ul id="update" class="update">
+            <table id="update" class="update">
             {% for x in profil %}
-            <li>
-                <div class="profil">Benutzername: <div class="inhalt">{{ x.benutzername }}</div></div>
-                <div class="profil">E-Mail: <div class="inhalt">{{ x.email }}</div> </div>
-                <div class="profil">Vorname: <div class="inhalt">{{ x.firstname }}</div></div>
-                <div class="profil">Nachname: <div class="inhalt">{{ x.lastname }}</div> </div>
-                <div class="profil">Passowort: <div class="inhalt">{{ x.password }}</div></div>
-                <div class="profil">2. Passwort: <div class="inhalt">{{ x.repeatpassword }}</div></div>
-            </li>
+            
+                <tr class="profil"><td>Benutzername: </td><td class="inhalt">{{ x.benutzername }}</td></tr>
+                <tr class="profil"><td>E-Mail: </td><td class="inhalt">{{ x.email }}</td> </tr>
+                <tr class="profil"><td>Vorname: </td><td class="inhalt">{{ x.firstname }}</td></tr>
+                <tr class="profil"><td>Nachname: </td><td class="inhalt">{{ x.lastname }}</td> </tr>
+                <tr class="profil"><td>Passwort: </td><td class="inhalt">{{ x.password }}</td></tr>
+                <tr class="profil"><td>2. Passwort: </td><td class="inhalt">{{ x.repeatpassword }}</td></tr>
+            
             {% endfor %}
-        </ul>
+        </table>
         <a href="update/" class="link">Profil bearbeiten</a>
         <a href="/members" class="zurück">Zurück</a>
     </div>
