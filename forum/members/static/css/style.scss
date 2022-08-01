@@ -301,3 +301,14 @@ body{
         
     }
 }
+
+.container{
+    .update{
+        li{
+            list-style: none;
+            .profil{
+                display: flex;
+            }
+        }
+    }
+}
