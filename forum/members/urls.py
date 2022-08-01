@@ -6,6 +6,6 @@ urlpatterns = [
     path('registrierung/', views.registrierung, name='registrierung'),
     path('profil/', views.profil, name='profil'),
     path('registrierung/addrecord/', views.addrecord, name='addrecord'),
-    path('profil/update/', views.update, name='update'),
+    path('profil/update/<int:id>', views.update, name='update'),
     path('profil/update/updaterecord/<int:id>', views.updaterecord, name='updaterecord'),
 ]

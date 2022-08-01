@@ -13,9 +13,10 @@
         <div class="headline">Profil</div>
     </div>
     <div class="container">
+        {% for x in profil %}
         <div class="profil_inhalt">
             <table id="profil" class="profil_tabelle">
-            {% for x in profil %}
+            
                 <tr><td class="profil">Benutzername: </td><td class="inhalt">{{ x.benutzername }}</td></tr>
                 <tr><td class="profil">E-Mail: </td><td class="inhalt">{{ x.email }}</td> </tr>
                 <tr><td class="profil">Vorname: </td><td class="inhalt">{{ x.firstname }}</td></tr>
@@ -23,11 +24,12 @@
                 <tr><td class="profil">Passwort: </td><td class="inhalt">{{ x.password }}</td></tr>
                 <tr><td class="profil">Passwort wiederholen: </td><td class="inhalt">{{ x.repeatpassword }}</td></tr>
             
-            {% endfor %}
+            
             </table>
         </div>
-        <a href="update/" class="update">Profil bearbeiten</a>
+        <a href="update/{{x.id}}" class="update">Profil bearbeiten</a>
         <a href="/members" class="zurück">Zurück</a>
+        {% endfor %}
     </div>
 </body>
 </html>
