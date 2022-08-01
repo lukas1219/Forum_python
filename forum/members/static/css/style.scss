@@ -303,12 +303,45 @@ body{
 }
 
 .container{
-    .update{
-        .profil{
-            font-weight: bold;
-        }
-        .inhalt{
-            font-weight: normal;
+    .profil_inhalt{
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+        .profil_tabelle{
+            
+            padding: 40px;
+            max-width: 100%;
+            width: 100%;
+            .profil{
+                font-weight: bold;
+            }
+            .inhalt{
+                padding-left: 20px;
+                font-weight: normal;
+            }
         }
     }
+   .update{
+    padding: 5px 10px 5px 10px;
+    background-color: $green;
+    width: auto;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+   }
+   .update:hover{
+    text-decoration: none;
+   }
+   .zurück{
+    padding: 5px 10px 5px 10px;
+    background-color: $blue;
+    width: auto;
+    color: black;
+    text-decoration: none;
+    border-radius: 3px;
+   }
+   .zurück:hover{
+    text-decoration: none;
+   }
+
 }

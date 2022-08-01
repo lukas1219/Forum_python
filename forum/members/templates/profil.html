@@ -13,20 +13,21 @@
         <div class="headline">Profil</div>
     </div>
     <div class="container">
-        <div class="profil">
-            <table id="update" class="update">
+        <div class="profil_inhalt">
+            <table id="profil" class="profil_tabelle">
             {% for x in profil %}
             
-                <tr class="profil"><td>Benutzername: </td><td class="inhalt">{{ x.benutzername }}</td></tr>
-                <tr class="profil"><td>E-Mail: </td><td class="inhalt">{{ x.email }}</td> </tr>
-                <tr class="profil"><td>Vorname: </td><td class="inhalt">{{ x.firstname }}</td></tr>
-                <tr class="profil"><td>Nachname: </td><td class="inhalt">{{ x.lastname }}</td> </tr>
-                <tr class="profil"><td>Passwort: </td><td class="inhalt">{{ x.password }}</td></tr>
-                <tr class="profil"><td>2. Passwort: </td><td class="inhalt">{{ x.repeatpassword }}</td></tr>
+                <tr><td class="profil">Benutzername: </td><td class="inhalt">{{ x.benutzername }}</td></tr>
+                <tr><td class="profil">E-Mail: </td><td class="inhalt">{{ x.email }}</td> </tr>
+                <tr><td class="profil">Vorname: </td><td class="inhalt">{{ x.firstname }}</td></tr>
+                <tr><td class="profil">Nachname: </td><td class="inhalt">{{ x.lastname }}</td> </tr>
+                <tr><td class="profil">Passwort: </td><td class="inhalt">{{ x.password }}</td></tr>
+                <tr><td class="profil">2. Passwort: </td><td class="inhalt">{{ x.repeatpassword }}</td></tr>
             
             {% endfor %}
-        </table>
-        <a href="update/" class="link">Profil bearbeiten</a>
+            </table>
+        </div>
+        <a href="update/" class="update">Profil bearbeiten</a>
         <a href="/members" class="zurück">Zurück</a>
     </div>
 </body>
