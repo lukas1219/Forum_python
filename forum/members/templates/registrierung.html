@@ -7,10 +7,11 @@
         <link rel="icon" type="favicon/favicon.ico" href="favicon.ico">
         <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
     </head>
-    <div class="header">
-        <div class="headline">Registrierung</div>
-    </div>
+    
     <body>
+        <div class="header">
+            <div class="headline">Registrierung</div>
+        </div>
         <div class="container">
             <form class="regestrieren" action="addrecord/" method="post">
                 {% csrf_token %}
@@ -34,7 +35,7 @@
                 </div>
                 <div class="line"></div>
 
-                <input type="submit" class="Registrierung" value="Registrierung">
+                <input type="submit" class="registrierung" value="Registrierung">
                 <a href="/members" class="zurück">Zurück</a>
             </form> 
         </div>
