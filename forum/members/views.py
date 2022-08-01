@@ -35,3 +35,4 @@ def addrecord(request):
   daten = registieren(benutzername=u, email=v, firstname=w, lastname=x, password=y, repeatpassword=z)
   daten.save()
   return HttpResponseRedirect(reverse('index'))
+
