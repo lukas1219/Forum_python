@@ -47,12 +47,12 @@ def updaterecord(request, id):
     lastname = request.POST['lastname']
     password = request.POST['password']
     repeatpassword = request.POST['repeatpassword']
-    profil = profil.objects.get(id=id)
-    profil.benutzername = benutzername
-    profil.email = email
-    profil.firstname = firstname
-    profil.lastname = lastname
-    profil.password = password
-    profil.repeatpassword = repeatpassword
-    profil.save()
+    daten = registieren.objects.get(id=id)
+    daten.benutzername = benutzername
+    daten.email = email
+    daten.firstname = firstname
+    daten.lastname = lastname
+    daten.password = password
+    daten.repeatpassword = repeatpassword
+    daten.save()
     return HttpResponseRedirect(reverse('profil'))
