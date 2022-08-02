@@ -352,63 +352,66 @@ body{
    }
 
 }
-.profileding{
-    .benutzer-bearbeiten{
-        display: flex;
-        .benutzername-eding{
-            max-width:200px;
-            width: 200px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            height: 30px;
+.container{
+    .profileding{
+        padding-top: 20px;
+        .benutzer-bearbeiten{
+            display: flex;
+            .benutzername-eding{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                height: 30px;
+            }
+            .email-eding{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                height: 30px;
+            }
         }
-        .email-eding{
-            max-width:200px;
-            width: 200px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            height: 30px;
+        .name-bearbeiten{
+            display: flex;
+            .firstname-eding{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                height: 30px;
+            }
+            .lastname-eding{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                height: 30px;
+            }
         }
-    }
-    .name-bearbeiten{
-        display: flex;
-        .firstname-eding{
-            max-width:200px;
-            width: 200px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            height: 30px;
+        .password-bearbeiten{
+            display: flex;
+            .password-eding{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                height: 30px;
+            }
+            .repeatpassword-eding{
+                max-width:200px;
+                width: 200px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                height: 30px;
+            }
         }
-        .lastname-eding{
-            max-width:200px;
-            width: 200px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            height: 30px;
+        .eding{
+            padding: 5px 10px 5px 10px;
+            background-color: $green;
+            border: none;
+            font-size: 16px;
+            border-radius: 3px;
         }
-    }
-    .password-bearbeiten{
-        display: flex;
-        .password-eding{
-            max-width:200px;
-            width: 200px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            height: 30px;
-        }
-        .repeatpassword-eding{
-            max-width:200px;
-            width: 200px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            height: 30px;
-        }
-    }
-    .eding{
-        padding: 5px 10px 5px 10px;
-        background-color: $green;
-        border: none;
-        font-size: 16px;
-        border-radius: 3px;
     }
 }

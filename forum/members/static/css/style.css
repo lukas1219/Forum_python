@@ -427,13 +427,17 @@ body {
   text-decoration: none;
 }
 
-.profileding .benutzer-bearbeiten {
+.container .profileding {
+  padding-top: 20px;
+}
+
+.container .profileding .benutzer-bearbeiten {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.profileding .benutzer-bearbeiten .benutzername-eding {
+.container .profileding .benutzer-bearbeiten .benutzername-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -441,7 +445,7 @@ body {
   height: 30px;
 }
 
-.profileding .benutzer-bearbeiten .email-eding {
+.container .profileding .benutzer-bearbeiten .email-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -449,13 +453,13 @@ body {
   height: 30px;
 }
 
-.profileding .name-bearbeiten {
+.container .profileding .name-bearbeiten {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.profileding .name-bearbeiten .firstname-eding {
+.container .profileding .name-bearbeiten .firstname-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -463,7 +467,7 @@ body {
   height: 30px;
 }
 
-.profileding .name-bearbeiten .lastname-eding {
+.container .profileding .name-bearbeiten .lastname-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -471,13 +475,13 @@ body {
   height: 30px;
 }
 
-.profileding .password-bearbeiten {
+.container .profileding .password-bearbeiten {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.profileding .password-bearbeiten .password-eding {
+.container .profileding .password-bearbeiten .password-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -485,7 +489,7 @@ body {
   height: 30px;
 }
 
-.profileding .password-bearbeiten .repeatpassword-eding {
+.container .profileding .password-bearbeiten .repeatpassword-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -493,7 +497,7 @@ body {
   height: 30px;
 }
 
-.profileding .eding {
+.container .profileding .eding {
   padding: 5px 10px 5px 10px;
   background-color: green;
   border: none;
