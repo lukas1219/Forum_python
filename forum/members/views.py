@@ -17,6 +17,10 @@ def profil(request):
     template = loader.get_template('profil.html')
     return HttpResponse(template.render({}, request))  
   
+def impressum(request):
+    template = loader.get_template('impressum.html')
+    return HttpResponse(template.render({}, request))  
+  
 def update(request, id):
     profil = registieren.objects.get(id=id)
     template = loader.get_template('profil_bearbeiten.html')
