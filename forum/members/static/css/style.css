@@ -437,13 +437,17 @@ body {
   display: flex;
 }
 
+.profileding .benutzer-bearbeiten .bearbeiten {
+  max-width: 200px;
+  width: 200px;
+}
+
 .profileding .benutzer-bearbeiten .benutzername-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
   border-radius: 4px;
   height: 30px;
-  margin-left: 2%;
 }
 
 .profileding .benutzer-bearbeiten .email-eding {
@@ -452,7 +456,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   height: 30px;
-  margin-left: 2%;
 }
 
 .profileding .name-bearbeiten {
@@ -467,7 +470,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   height: 30px;
-  margin-left: 2%;
 }
 
 .profileding .name-bearbeiten .lastname-eding {
@@ -476,7 +478,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   height: 30px;
-  margin-left: 2%;
 }
 
 .profileding .password-bearbeiten {
@@ -491,7 +492,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   height: 30px;
-  margin-left: 2%;
 }
 
 .profileding .password-bearbeiten .repeatpassword-eding {
@@ -500,7 +500,6 @@ body {
   border: 1px solid #ccc;
   border-radius: 4px;
   height: 30px;
-  margin-left: 2%;
 }
 
 .profileding .eding {
