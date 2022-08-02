@@ -13,25 +13,25 @@
             <div class="headline">Profil bearbeiten</div>
         </div>
         <div class="container">
-            <form class="profileding" action="updaterecord/{{ daten.id }}" method="post">
+            <form class="profileding" action="updaterecord/{{ profil.id }}" method="post">
                 {% csrf_token %}
                 <div class="menge_angabe" id="inputGroup-sizing-default">Benutzername:</div>
-                <input type="text" class="benutzername" name="benutzername" value="{{ daten.benutzername }}">
+                <input type="text" class="benutzername" name="benutzername" value="{{ profil.benutzername }}">
                 <br><br>
                 <div class="beschreibung" id="inputGroup-sizing-default">E-Mail:</div>
-                <input type="text" class="email" name="email" value="{{ daten.email }}">
+                <input type="text" class="email" name="email" value="{{ profil.email }}">
                 <br><br>
                 <div class="beschreibung" id="inputGroup-sizing-default">Vorname:</div>
-                <input type="text" class="firstname" name="firstname" value="{{ daten.firstname }}">
+                <input type="text" class="firstname" name="firstname" value="{{ profil.firstname }}">
                 <br><br>
                 <div class="beschreibung" id="inputGroup-sizing-default">Nachname</div>
-                <input type="text" class="lastname" name="lastname" value="{{ daten.lastname }}">
+                <input type="text" class="lastname" name="lastname" value="{{ profil.lastname }}">
                 <br><br>
                 <div class="beschreibung" id="inputGroup-sizing-default">Passwort</div>
-                <input type="text" class="password" name="password" value="{{ daten.password }}">
+                <input type="text" class="password" name="password" value="{{ profil.password }}">
                 <br><br>
                 <div class="beschreibung" id="inputGroup-sizing-default">Passwort wiederholen</div>
-                <input type="text" class="repeatpassword" name="repeatpassword" value="{{ daten.repeatpassword }}">
+                <input type="text" class="repeatpassword" name="repeatpassword" value="{{ profil.repeatpassword }}">
                 <br><br>
                 <a href="/members/profil" class="zurueck">Zurück</a>
                 <input type="submit" class="eding" value="Update">
