@@ -14,7 +14,7 @@
             <div class="nav">
                 <ul class="navi">
                     <li><a href="/members" class="link">Home</a></li>
-                    <li><a href="profil/" class="link">Profil</a></li>
+                    <li><a href="/members/profil/" class="link">Profil</a></li>
                     <li><a href="#" class="link">Themen</a></li>
                     <li><a href="impressum/" class="link">Impressum</a></li>
                 </ul>
@@ -25,12 +25,20 @@
         <div class="main-left">
             <ul>
                 <li><a href="../" class="link">Home</a></li>
-                <li><a href="profil/" class="link">Profil</a></li>
+                <li><a href="/members/profil/" class="link">Profil</a></li>
                 <li><a href="#" class="link">Themen</a></li>
                 <li><a href="impressum/" class="link">Impressum</a></li>
+                <li> <button onclick="darkmode()">Dark Mode</button></li>
             </ul>
         </div>
+        <script>
+            function darkmode() {
+               var element = document.body;
+               element.classList.toggle("dark-mode");
+            }
+            </script>
         <div class="main">
+            <div class="impressum">
     <p>Informationspflicht laut §5 E-Commerce Gesetz, §14 Unternehmensgesetzbuch, §63 Gewerbeordnung und Offenlegungspflicht laut §25 Mediengesetz.</p>
 
     <p>Lukas Sartori</p>
@@ -223,6 +231,7 @@
     <p></p>
     <a href="/members" class="zurück">Zurück</a>
     </p>
+</div>
 </div>
 
 </div>

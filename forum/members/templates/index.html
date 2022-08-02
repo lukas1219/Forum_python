@@ -41,11 +41,11 @@
         <div class="main-left">
            
             <ul>
-                <li> <div class="mode">Dark mode: <span class="change">OFF</span></div></li>
                 <li><a href="../" class="link">Home</a></li>
                 <li><a href="profil/" class="link">Profil</a></li>
                 <li><a href="#" class="link">Themen</a></li>
                 <li><a href="impressum/" class="link">Impressum</a></li>
+                <li> <button onclick="darkmode()">Dark Mode</button></li>
             </ul>
         </div>
         <div class="main">
@@ -56,15 +56,10 @@
         </div>
     </div>
     <script>
-        $( ".change" ).on("click", function() {
-            if( $( "body" ).hasClass( "dark" )) {
-                $( "body" ).removeClass( "dark" );
-                $( ".change" ).text( "OFF" );
-            } else {
-                $( "body" ).addClass( "dark" );
-                $( ".change" ).text( "ON" );
-            }
-        });
+        function darkmode() {
+           var element = document.body;
+           element.classList.toggle("dark-mode");
+        }
     </script>
 </body>
 </html>

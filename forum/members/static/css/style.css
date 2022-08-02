@@ -4,6 +4,29 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: rgba(0, 0, 0, 0.05);
   font-size: 16px;
+  background-color: white;
+  color: black;
+}
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+.dark-mode .header .menu .nav .navi li .link {
+  color: white;
+}
+
+.dark-mode .container .main-left ul li .link {
+  color: white;
+}
+
+.dark-mode .zurück {
+  color: white;
+}
+
+.dark-mode .impressum .zurück {
+  color: width;
 }
 
 .header {
@@ -267,22 +290,6 @@ body {
 
 .container .main-left ul li {
   list-style: none;
-}
-
-.container .main-left ul li .change {
-  margin-right: 10px;
-  cursor: pointer;
-  border: 1px solid #555;
-  border-radius: 40%;
-  width: 20px;
-  text-align: center;
-  padding: 5px;
-  margin-left: 8px;
-}
-
-.container .main-left ul li .dark {
-  background-color: #222;
-  color: #e6e6e6;
 }
 
 .container .main-left ul li .link {
@@ -576,5 +583,18 @@ body {
   border: none;
   font-size: 16px;
   border-radius: 3px;
+}
+
+.impressum .zurück {
+  padding: 5px 10px 5px 10px;
+  background-color: blue;
+  width: auto;
+  color: black;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.impressum .zurück:hover {
+  text-decoration: none;
 }
 /*# sourceMappingURL=style.css.map */
