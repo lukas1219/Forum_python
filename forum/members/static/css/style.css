@@ -433,15 +433,63 @@ body {
   display: flex;
 }
 
+.profileding .benutzer-bearbeiten .benutzername-eding {
+  max-width: 200px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 30px;
+}
+
+.profileding .benutzer-bearbeiten .email-eding {
+  max-width: 200px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 30px;
+}
+
 .profileding .name-bearbeiten {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
+.profileding .name-bearbeiten .firstname-eding {
+  max-width: 200px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 30px;
+}
+
+.profileding .name-bearbeiten .lastname-eding {
+  max-width: 200px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 30px;
+}
+
 .profileding .password-bearbeiten {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.profileding .password-bearbeiten .password-eding {
+  max-width: 200px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 30px;
+}
+
+.profileding .password-bearbeiten .repeatpassword-eding {
+  max-width: 200px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  height: 30px;
 }
 /*# sourceMappingURL=style.css.map */
