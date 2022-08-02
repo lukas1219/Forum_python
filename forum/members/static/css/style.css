@@ -427,17 +427,17 @@ body {
   text-decoration: none;
 }
 
-.container .profileding {
+.profileding {
   padding-top: 20px;
 }
 
-.container .profileding .benutzer-bearbeiten {
+.profileding .benutzer-bearbeiten {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.container .profileding .benutzer-bearbeiten .benutzername-eding {
+.profileding .benutzer-bearbeiten .benutzername-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -445,7 +445,7 @@ body {
   height: 30px;
 }
 
-.container .profileding .benutzer-bearbeiten .email-eding {
+.profileding .benutzer-bearbeiten .email-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -453,13 +453,13 @@ body {
   height: 30px;
 }
 
-.container .profileding .name-bearbeiten {
+.profileding .name-bearbeiten {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.container .profileding .name-bearbeiten .firstname-eding {
+.profileding .name-bearbeiten .firstname-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -467,7 +467,7 @@ body {
   height: 30px;
 }
 
-.container .profileding .name-bearbeiten .lastname-eding {
+.profileding .name-bearbeiten .lastname-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -475,13 +475,13 @@ body {
   height: 30px;
 }
 
-.container .profileding .password-bearbeiten {
+.profileding .password-bearbeiten {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.container .profileding .password-bearbeiten .password-eding {
+.profileding .password-bearbeiten .password-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -489,7 +489,7 @@ body {
   height: 30px;
 }
 
-.container .profileding .password-bearbeiten .repeatpassword-eding {
+.profileding .password-bearbeiten .repeatpassword-eding {
   max-width: 200px;
   width: 200px;
   border: 1px solid #ccc;
@@ -497,7 +497,7 @@ body {
   height: 30px;
 }
 
-.container .profileding .eding {
+.profileding .eding {
   padding: 5px 10px 5px 10px;
   background-color: green;
   border: none;
