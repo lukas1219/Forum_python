@@ -335,6 +335,30 @@ body{
             padding: 40px;
             max-width: 100%;
             width: 100%;
+            .update{
+                padding: 5px 10px 5px 10px;
+                background-color: $green;
+                width: auto;
+                color: black;
+                text-decoration: none;
+                border-radius: 3px;
+               }
+               .update:hover{
+                text-decoration: none;
+               }
+               .zurück{
+                padding: 5px 10px 5px 10px;
+                background-color: $blue;
+                width: auto;
+                color: black;
+                text-decoration: none;
+                border-radius: 3px;
+               
+               }
+               .zurück:hover{
+                text-decoration: none;
+               }
+            
             .profil{
                 font-weight: bold;
             }
@@ -344,30 +368,7 @@ body{
             }
         }
     }
-   .update{
-    padding: 5px 10px 5px 10px;
-    background-color: $green;
-    width: auto;
-    color: black;
-    text-decoration: none;
-    border-radius: 3px;
-    margin-left: 3%;
-   }
-   .update:hover{
-    text-decoration: none;
-   }
-   .zurück{
-    padding: 5px 10px 5px 10px;
-    background-color: $blue;
-    width: auto;
-    color: black;
-    text-decoration: none;
-    border-radius: 3px;
-   }
-   .zurück:hover{
-    text-decoration: none;
-   }
-
+   
 }
 
 .profileding{
