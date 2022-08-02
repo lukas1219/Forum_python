@@ -16,21 +16,21 @@
             <form class="profileding" action="updaterecord/{{ profil.id }}" method="post">
                 {% csrf_token %}
                 <div class="benutzer-bearbeiten">
-                    <div class="bearbeiten" id="inputGroup-sizing-default">Benutzername:</div>
+                    <div class="bearbeiten-benutzername" id="inputGroup-sizing-default">Benutzername:</div>
                     <input type="text" class="benutzername-eding" name="benutzername" value="{{ profil.benutzername }}">
-                    <div class="bearbeiten" id="inputGroup-sizing-default">E-Mail:</div>
+                    <div class="bearbeiten-email" id="inputGroup-sizing-default">E-Mail:</div>
                     <input type="text" class="email-eding" name="email" value="{{ profil.email }}">
                 </div>
                 <div class="name-bearbeiten">
-                    <div class="bearbeiten" id="inputGroup-sizing-default">Vorname:</div>
+                    <div class="bearbeiten-firstname" id="inputGroup-sizing-default">Vorname:</div>
                     <input type="text" class="firstname-eding" name="firstname" value="{{ profil.firstname }}">
-                    <div class="bearbeiten" id="inputGroup-sizing-default">Nachname:</div>
+                    <div class="bearbeiten-lastname" id="inputGroup-sizing-default">Nachname:</div>
                     <input type="text" class="lastname-eding" name="lastname" value="{{ profil.lastname }}">
                 </div>
                 <div class="password-bearbeiten">
-                    <div class="bearbeiten" id="inputGroup-sizing-default">Passwort:</div>
+                    <div class="bearbeiten-password" id="inputGroup-sizing-default">Passwort:</div>
                     <input type="text" class="password-eding" name="password" value="{{ profil.password }}">
-                    <div class="bearbeiten" id="inputGroup-sizing-default">Passwort wiederholen:</div>
+                    <div class="bearbeiten-repeatpassword" id="inputGroup-sizing-default">Passwort wiederholen:</div>
                     <input type="text" class="repeatpassword-eding" name="repeatpassword" value="{{ profil.repeatpassword }}">
                 </div>
                 <br><br>

@@ -357,7 +357,12 @@ body{
     padding-top: 20px;
     .benutzer-bearbeiten{
         display: flex;
-        .bearbeiten{
+        .bearbeiten-email{
+            max-width: 200px;
+            width: 200px;
+            margin-left: 2%;
+        }
+        .bearbeiten-benutzername{
             max-width: 200px;
             width: 200px;
         }
@@ -378,6 +383,15 @@ body{
     }
     .name-bearbeiten{
         display: flex;
+        .bearbeiten-lastname{
+            max-width: 200px;
+            width: 200px;
+            margin-left: 2%;
+        }
+        .bearbeiten-firstname{
+            max-width: 200px;
+            width: 200px;
+        }
         .firstname-eding{
             max-width:200px;
             width: 200px;
@@ -395,6 +409,15 @@ body{
     }
     .password-bearbeiten{
         display: flex;
+        .bearbeiten-password{
+            max-width: 200px;
+            width: 200px;
+        }
+        .bearbeiten-repeatpassword{
+            max-width: 200px;
+            width: 200px;
+            margin-left: 2%;
+        }
         .password-eding{
             max-width:200px;
             width: 200px;

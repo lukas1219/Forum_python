@@ -437,7 +437,13 @@ body {
   display: flex;
 }
 
-.profileding .benutzer-bearbeiten .bearbeiten {
+.profileding .benutzer-bearbeiten .bearbeiten-email {
+  max-width: 200px;
+  width: 200px;
+  margin-left: 2%;
+}
+
+.profileding .benutzer-bearbeiten .bearbeiten-benutzername {
   max-width: 200px;
   width: 200px;
 }
@@ -464,6 +470,17 @@ body {
   display: flex;
 }
 
+.profileding .name-bearbeiten .bearbeiten-lastname {
+  max-width: 200px;
+  width: 200px;
+  margin-left: 2%;
+}
+
+.profileding .name-bearbeiten .bearbeiten-firstname {
+  max-width: 200px;
+  width: 200px;
+}
+
 .profileding .name-bearbeiten .firstname-eding {
   max-width: 200px;
   width: 200px;
@@ -484,6 +501,17 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+.profileding .password-bearbeiten .bearbeiten-password {
+  max-width: 200px;
+  width: 200px;
+}
+
+.profileding .password-bearbeiten .bearbeiten-repeatpassword {
+  max-width: 200px;
+  width: 200px;
+  margin-left: 2%;
 }
 
 .profileding .password-bearbeiten .password-eding {
