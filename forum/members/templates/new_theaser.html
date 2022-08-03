@@ -21,5 +21,20 @@
             </div>
         </forum>
     </div>
+    <div class="container">
+        <form class="regestrieren" action="addrecord/" method="post">
+            {% csrf_token %}
+            <div class="headline">
+                <div class="benutzer">Benutzername</div>
+                <input class="w3-input w3-border w3-round-large" name="benutzername" id="benutzername"  placeholder="Benutzername" aria-label="user">
+            </div>
+            <div class="name">
+                <div class="firstname">Vorname</div>
+                <input class="w3-input w3-border w3-round-large" name="firstname" id="firstname"  placeholder="Vorname" aria-label="first-name">
+            </div>
+            <input type="submit" class="registrierung" value="Registrierung">
+            <a href="/members" class="zurück">Zurück</a>
+        </form> 
+    </div>
 </body>
 </html>
