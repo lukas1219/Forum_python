@@ -8,6 +8,7 @@ urlpatterns = [
     path('profil/', views.profil, name='profil'),
     path('impressum/', views.impressum, name='impressum'),
     path('registrierung/addrecord/', views.addrecord, name='addrecord'),
+    path('newtheaser/', views.newtheaser, name='newtheaser'),
     path('profil/update/<int:id>', views.update, name='update'),
     path('profil/update/updaterecord/<int:id>', views.updaterecord, name='updaterecord'),
 ]
