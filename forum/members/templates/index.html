@@ -49,10 +49,22 @@
             </ul>
         </div>
         <div class="main">
-
+            <div class="container">
+                {% for x in profil %}
+                <div class="profil_inhalt">
+                    <table id="profil" class="profil_tabelle">
+                        <tr><td class="headline">{{ x.headline }}</td></tr>
+                        <tr><td class="date">{{ x.created_at }}</td> </tr>
+                        <tr><td class="theaser">{{ x.theaser }}</td></tr>
+                        <tr><td><a href="update/{{x.id}}" class="update">Profil bearbeiten</a></td></tr>
+                    </table>
+                </div>
+               
+                {% endfor %}
+            </div>
         </div>
         <div class="main-right">
-
+            <a href="theaser/" class="theaser">Neues Thema anlgen</a>
         </div>
     </div>
     <script>
