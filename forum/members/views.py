@@ -71,8 +71,8 @@ def updaterecord(request, id):
   return HttpResponseRedirect(reverse('profil'))
 
 def newtheaser(request):
-  y = request.POST['headline']
-  z = request.POST['theaser']
-  profil = registieren(headline=y, theaser=z)
+  s = request.POST['headline']
+  t = request.POST['theaser']
+  profil = registieren(headline=s, theaser=t)
   profil.save()
   return HttpResponseRedirect(reverse('index'))
