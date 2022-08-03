@@ -21,14 +21,14 @@
             </div>
         </forum>
     </div>
-    <div class="container">
-        <form class="regestrieren" action="addrecord/" method="post">
+    <div class="container theaser">
+        <form class="theaser_innere" action="addrecord/" method="post">
             {% csrf_token %}
             <div class="headline">
                 <input class="w3-input w3-border w3-round-large" name="headline" id="headline"  placeholder="Überschrift" aria-label="headline">
             </div>
-            <div class="name">
-                <input class="w3-input w3-border w3-round-large" name="theaser" id="theaser"  placeholder="Theaser" aria-label="theaser">
+            <div class="thema">
+                <textarea class="w3-input w3-border w3-round-large" name="theaser" id="theaser"  placeholder="Theaser" aria-label="theaser"></textarea>
             </div>
             <input type="submit" class="theaser" value="Posten">
             <a href="/members" class="zurück">Zurück</a>

@@ -609,4 +609,54 @@ body {
 .impressum .zurück:hover {
   text-decoration: none;
 }
+
+.container.theaser {
+  display: block;
+}
+
+.container.theaser .headline {
+  margin-top: 10px;
+}
+
+.container.theaser .headline #headline {
+  max-width: 500px;
+  max-height: 30px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.container.theaser .thema {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.container.theaser .thema #theaser {
+  max-width: 500px;
+  max-height: 100px;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
+.container.theaser .theaser {
+  padding: 5px 10px 5px 10px;
+  background-color: green;
+  border: none;
+  font-size: 16px;
+  border-radius: 3px;
+}
+
+.container.theaser .zurück {
+  padding: 5px 10px 5px 10px;
+  background-color: blue;
+  width: auto;
+  color: black;
+  text-decoration: none;
+  border-radius: 3px;
+}
+
+.container.theaser .zurück:hover {
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
