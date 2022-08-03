@@ -71,7 +71,7 @@ def updaterecord(request, id):
   return HttpResponseRedirect(reverse('profil'))
 
 def forum(request):
-      forum = forum.objects.all().values()
+  forum = forum.objects.all().values()
   template = loader.get_template('index.html')
   context = {
     'forum': forum,
