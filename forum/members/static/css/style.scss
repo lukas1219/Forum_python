@@ -271,6 +271,14 @@ body{
         }
         
     }
+    .main{
+        display: flex;
+        justify-content: center;
+    }
+    .main-right{
+        display: flex;
+        justify-content: right;
+    }
   
 }
 .container{
