@@ -25,14 +25,12 @@
         <form class="regestrieren" action="addrecord/" method="post">
             {% csrf_token %}
             <div class="headline">
-                <div class="benutzer">Benutzername</div>
-                <input class="w3-input w3-border w3-round-large" name="benutzername" id="benutzername"  placeholder="Benutzername" aria-label="user">
+                <input class="w3-input w3-border w3-round-large" name="headline" id="headline"  placeholder="Überschrift" aria-label="headline">
             </div>
             <div class="name">
-                <div class="firstname">Vorname</div>
-                <input class="w3-input w3-border w3-round-large" name="firstname" id="firstname"  placeholder="Vorname" aria-label="first-name">
+                <input class="w3-input w3-border w3-round-large" name="theaser" id="theaser"  placeholder="Theaser" aria-label="theaser">
             </div>
-            <input type="submit" class="registrierung" value="Registrierung">
+            <input type="submit" class="theaser" value="Posten">
             <a href="/members" class="zurück">Zurück</a>
         </form> 
     </div>
