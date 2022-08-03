@@ -69,3 +69,10 @@ def updaterecord(request, id):
   profil.repeatpassword = repeatpassword
   profil.save()
   return HttpResponseRedirect(reverse('profil'))
+
+def newtheaser(request):
+  y = request.POST['headline']
+  z = request.POST['theaser']
+  profil = registieren(headline=y, theaser=z)
+  profil.save()
+  return HttpResponseRedirect(reverse('index'))
