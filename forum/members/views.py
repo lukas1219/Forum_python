@@ -42,14 +42,6 @@ def profil(request):
   }
   return HttpResponse(template.render(context, request))
 
-def forum(request):
-  forum = forum.objects.all().values()
-  template = loader.get_template('index.html')
-  context = {
-    'forum': forum,
-  }
-  return HttpResponse(template.render(context, request))
-
 def addrecord(request):
   u = request.POST['benutzername']
   v = request.POST['email']
@@ -77,6 +69,15 @@ def updaterecord(request, id):
   profil.repeatpassword = repeatpassword
   profil.save()
   return HttpResponseRedirect(reverse('profil'))
+
+def forum(request):
+      forum = forum.objects.all().values()
+  template = loader.get_template('index.html')
+  context = {
+    'forum': forum,
+  }
+  return HttpResponse(template.render(context, request))
+
 
 def newtheaser(request):
   s = request.POST['headline']
