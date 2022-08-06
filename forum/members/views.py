@@ -1,8 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
-from .models import registieren
-from .models import forum
+from .models import registieren, forum
 
 
 def index(request):
