@@ -19,4 +19,4 @@ class forum(models.Model):
     theaseranswer = models.CharField(max_length=255)
     
     def __str__(self):
-        return str(self.id) + ' ' + self.created_at + ' ' + self.headline + ' ' + self.theaser + ' ' + self.theaseranswer
+        return str(self.id) + ' ' + self.headline + ' ' + self.theaser + ' ' + self.theaseranswer
