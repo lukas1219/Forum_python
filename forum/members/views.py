@@ -82,6 +82,6 @@ def forum(request):
 def newtheaser(request):
   s = request.POST['headline']
   t = request.POST['theaser']
-  profil = registieren(headline=s, theaser=t)
-  profil.save()
+  forum = forum(headline=s, theaser=t)
+  forum.save()
   return HttpResponseRedirect(reverse('index'))
