@@ -79,9 +79,8 @@ def forum(request):
 
 
 def newtheaser(request):
-  r = request.POST['headline']
-  s = request.POST['theaser']
-  t = request.POST['theaseranswer']
-  forum = forum(headline=r, theaser=s, theaseranswer=t)
+  s = request.POST['headline']
+  t = request.POST['theaser']
+  forum = forum(headline=s, theaser=t)
   forum.save()
   return HttpResponseRedirect(reverse('index'))
