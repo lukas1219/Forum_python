@@ -19,7 +19,7 @@ class forum(models.Model):
     
     
     def __str__(self):
-        return str(self.id) + ' ' + self.headline + ' ' + self.theaser + ' ' + self.theaseranswer
+        return str(self.id) + ' ' + self.headline + ' ' + self.theaser
     
     
 class forumanswer(models.Model):
