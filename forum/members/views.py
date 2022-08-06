@@ -70,17 +70,18 @@ def updaterecord(request, id):
   return HttpResponseRedirect(reverse('profil'))
 
 def forum(request):
-  forum = forum.objects.all().values()
+  theaser = forum.objects.all().values()
   template = loader.get_template('index.html')
   context = {
-    'forum': forum,
+    'theaser': theaser,
   }
   return HttpResponse(template.render(context, request))
 
 
 def newtheaser(request):
-  s = request.POST['headline']
-  t = request.POST['theaser']
-  forum = forum(headline=s, theaser=t)
-  forum.save()
+  r = request.POST['headline']
+  s = request.POST['theaser']
+  t = request.POST['theaseranswer']
+  theaser = forum(headline=r, theaser=s, theaseranswer=t)
+  theaser.save()
   return HttpResponseRedirect(reverse('index'))
