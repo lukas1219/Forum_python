@@ -12,7 +12,7 @@ def index(request):
 def registrierung(request):
     template = loader.get_template('registrierung.html')
     return HttpResponse(template.render({}, request))
-  
+    
 def theaser(request):
   template = loader.get_template('new_theaser.html')
   return HttpResponse(template.render({}, request))
