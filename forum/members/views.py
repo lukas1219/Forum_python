@@ -78,7 +78,7 @@ def forum(request):
   return HttpResponse(template.render(context, request))
 
 
-def newtheaser(request):
+def newtheaser(request, id):
   r = request.POST['headline']
   s = request.POST['theaser']
   t = request.POST['theaseranswer']
