@@ -16,8 +16,6 @@ class forum(models.Model):
     created_at = models.DateField(default=date.today)
     headline = models.CharField(max_length=255)
     theaser = models.CharField(max_length=255)
-    
-    
     def __str__(self):
         return str(self.id) + ' ' + self.headline + ' ' + self.theaser
     
