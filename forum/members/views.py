@@ -72,7 +72,7 @@ def updaterecord(request, id):
 
 def forum(request):
   forum = forum.objects.all().values()
-  template = loader.get_template('index.html')
+  template = loader.get_template('new_theaser.html')
   context = {
     'forum': forum,
   }
