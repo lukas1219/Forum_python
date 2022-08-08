@@ -13,9 +13,9 @@ class registieren(models.Model):
     
 class forum(models.Model):
     headline = models.CharField(max_length=255)
-    theaser = models.CharField(max_length=255)
+    theaser_text = models.CharField(max_length=255)
     def __str__(self):
-        return str(self.id) + ' ' + self.headline + ' ' + self.theaser
+        return str(self.id) + ' ' + self.headline + ' ' + self.theaser_text
     
     
 class forumanswer(models.Model):
