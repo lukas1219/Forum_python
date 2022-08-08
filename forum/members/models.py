@@ -1,5 +1,4 @@
 from django.db import models
-from datetime import date
 
 class registieren(models.Model):
     benutzername = models.CharField(max_length=255)
