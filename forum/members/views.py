@@ -82,4 +82,4 @@ def newtheaser(request):
   t = request.POST['theaser_text']
   theaser = theaser(headline=s, theaser_text=t)
   theaser.save()
-  return HttpResponseRedirect(reverse('index'))
+  return HttpResponseRedirect(reverse('forum'))
