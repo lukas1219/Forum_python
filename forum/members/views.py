@@ -2,8 +2,6 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from .models import registieren, forum
-from datetime import date
-
 
 def index(request):
   template = loader.get_template('index.html')
