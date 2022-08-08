@@ -23,6 +23,5 @@ class forum(models.Model):
 class forumanswer(models.Model):
     created_at = models.DateField(default=date.today)
     theaseranswer = models.CharField(max_length=255)
-    
     def __str__(self):
         return str(self.id) + ' ' + self.theaseranswer
