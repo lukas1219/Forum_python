@@ -12,5 +12,5 @@ urlpatterns = [
     path('profil/update/updaterecord/<int:id>', views.updaterecord, name='updaterecord'),
     path('theaser_link/newtheaser/', views.newtheaser, name='newtheaser'),
     path('answer/<int:id>', views.answer, name='answer'),
-    path('answer/<int:id>/theaseranswer/', views.theaseranswer, name='theaseranswer'),
+    path('answer/theaseranswerpost/', views.theaseranswer, name='theaseranswer'),
 ]

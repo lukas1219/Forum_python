@@ -98,7 +98,7 @@ def theaseranswer(request):
     }
     return HttpResponse(template.render(context, request))
   
-def theaseranswer(request):
+def theaseranswerpost(request):
   p = request.POST['theaser_answer']
   answer = forumanswer(theaser_answer=p)
   answer.save()
