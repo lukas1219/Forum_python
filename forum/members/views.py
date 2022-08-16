@@ -90,7 +90,7 @@ def answer(request, id):
     }
     return HttpResponse(template.render(context, request))
   
-def theaseanswer(request):
+def theaseranswer(request):
     answer = forumanswer.objects.all().values()
     template = loader.get_template('answer')
     context = {
@@ -98,7 +98,7 @@ def theaseanswer(request):
     }
     return HttpResponse(template.render(context, request))
   
-def theaseanswer(request):
+def theaseranswer(request):
   p = request.POST['theaser_answer']
   answer = forumanswer(theaser_answer=p)
   answer.save()
