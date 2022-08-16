@@ -34,39 +34,38 @@
             <a href="registrierung/" class="registrierung">Registrierung</a>
             <div class="line"></div>
         </form>
-        <div class="container">
-            <div class="main-left">
-               
-              
+    </div>
+    <div class="container">
+        <div class="main-left">
+           
+          
+        </div>
+        <div class="main">
+            <div class="container">
+                <form action="{{ theaser.id }}" method="post">
+                    {% csrf_token %}
+                    <table id="forum" class="forum_tabelle">
+                        <tr><td class="headline">{{ theaser.headline }}</td></tr>
+                        <tr><td class="theaser">{{ theaser.theaser_text }}</td></tr>
+                    </table>
+                </form>
+                <form action="{{ theaseranswer.id }}" method="post">
+                    {% csrf_token %}
+                    <table id="forum" class="forum_tabelle">
+                        <tr><td class="answer">{{ answer.theaseranswer }}</td></tr>
+                    </table>
+                </form>
+                <form class="theaseranswer" action="theaseranswer/" method="post">
+                    {% csrf_token %}
+                    <div class="thema">
+                        <textarea class="w3-input w3-border w3-round-large" name="theaser_answer" id="theaser_text"  placeholder="Antwort" aria-label="theaser"></textarea>
+                    </div>
+                    <input type="submit" class="forum" value="Posten">
+                    <a href="/members" class="zurück">Zurück</a>
+                </form> 
             </div>
-            <div class="main">
-                <div class="container">
-                    <form action="updaterecord/{{ theaser.id }}" method="post">
-                        {% csrf_token %}
-                        <table id="forum" class="forum_tabelle">
-                            <tr><td class="headline">{{ theaser.headline }}</td></tr>
-                            <tr><td class="theaser">{{ theaser.theaser_text }}</td></tr>
-                            <tr><td class="answer">{{ answer.theaseranswer }}</td></tr>
-                        </table>
-                    </form>
-                    <form action="updaterecord/{{ theaseranswer.id }}" method="post">
-                        {% csrf_token %}
-                        <table id="forum" class="forum_tabelle">
-                            <tr><td class="answer">{{ answer.theaseranswer }}</td></tr>
-                        </table>
-                    </form>
-                    <form class="theaseranswer" action="theaseranswer/" method="post">
-                        {% csrf_token %}
-                        <div class="thema">
-                            <textarea class="w3-input w3-border w3-round-large" name="theaser_answer" id="theaser_text"  placeholder="Antwort" aria-label="theaser"></textarea>
-                        </div>
-                        <input type="submit" class="forum" value="Posten">
-                        <a href="/members" class="zurück">Zurück</a>
-                    </form> 
-                </div>
-            </div>
-            <div class="main-right">
-            </div>
+        </div>
+        <div class="main-right">
         </div>
     </div>
     <script>
