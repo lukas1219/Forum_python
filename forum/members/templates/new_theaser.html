@@ -1,38 +1,38 @@
 {% load static %}
 <html>
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Karten Forum</title>
-    <link rel="icon" type="favicon/favicon.ico" href="favicon.ico">
-    <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
-</head>
-<body>
-    <div class="header">
-        <div class="headline">Neues Theaser</div>
-        <form class="menu">
-            <div class="nav">
-                <ul class="navi">
-                    <li><a href="../" class="link">Home</a></li>
-                    <li><a href="/members/profil/" class="link">Profil</a></li>
-                    <li><a href="#" class="link">Themen</a></li>
-                    <li><a href="/members/impressum/" class="link">Impressum</a></li>
-                </ul>
-            </div>
-        </forum>
-    </div>
-    <div class="container theaser">
-        <form class="theaser_innere" action="newtheaser/" method="post">
-            {% csrf_token %}
-            <div class="headline">
-                <input class="w3-input w3-border w3-round-large" name="headline" id="headline"  placeholder="Überschrift" aria-label="headline">
-            </div>
-            <div class="thema">
-                <textarea class="w3-input w3-border w3-round-large" name="theaser_text" id="theaser_text"  placeholder="Theaser" aria-label="theaser"></textarea>
-            </div>
-            <input type="submit" class="forum" value="Posten">
-            <a href="/members" class="zurück">Zurück</a>
-        </form> 
-    </div>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Karten Forum</title>
+        <link rel="icon" type="favicon/favicon.ico" href="favicon.ico">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}"> 
+    </head>
+    <body>
+        <div class="header">
+            <div class="headline">Neues Theaser</div>
+            <form class="menu">
+                <div class="nav">
+                    <ul class="navi">
+                        <li><a href="../" class="link">Home</a></li>
+                        <li><a href="/members/profil/" class="link">Profil</a></li>
+                        <li><a href="#" class="link">Themen</a></li>
+                        <li><a href="/members/impressum/" class="link">Impressum</a></li>
+                    </ul>
+                </div>
+            </form>
+        </div>
+        <div class="container theaser">
+            <form class="theaser_innere" action="newtheaser/" method="post">
+                {% csrf_token %}
+                <div class="headline">
+                    <input class="w3-input w3-border w3-round-large" name="headline" id="headline"  placeholder="Überschrift" aria-label="headline">
+                </div>
+                <div class="thema">
+                    <textarea class="w3-input w3-border w3-round-large" name="theaser_text" id="theaser_text"  placeholder="Theaser" aria-label="theaser"></textarea>
+                </div>
+                <input type="submit" class="forum" value="Posten">
+                <a href="/members" class="zurück">Zurück</a>
+            </form> 
+        </div>
+    </body>
 </html>

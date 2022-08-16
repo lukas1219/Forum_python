@@ -33,37 +33,22 @@
             <div class="line"></div>
             <a href="registrierung/" class="registrierung">Registrierung</a>
             <div class="line"></div>
-            
         </form>
-       
-    </div>
-    <div class="container">
-        <div class="main-left">
-           
-            <ul>
-                <li><a href="../" class="link">Home</a></li>
-                <li><a href="profil/" class="link">Profil</a></li>
-                <li><a href="#" class="link">Themen</a></li>
-                <li><a href="impressum/" class="link">Impressum</a></li>
-                <li> <button onclick="darkmode()">Dark Mode</button></li>
-            </ul>
-        </div>
-        <div class="main">
-            <div class="container">
-                {% for x in theaser %}
-                        <div class="forum_inhalt">
-                            <a href="answer/{{ x.id }}">
-                                <table id="forum" class="forum_tabelle">
-                                    <tr><td class="headline">{{ x.headline }}</td></tr>
-                                    <tr><td class="theaser">{{ x.theaser_text }}</td></tr>
-                                </table>
-                            </a>   
-                        </div>
-                {% endfor %}
+        <div class="container">
+            <div class="main-left">
+               
+                <ul>
+                    <li><a href="../" class="link">Home</a></li>
+                    <li><a href="profil/" class="link">Profil</a></li>
+                    <li><a href="#" class="link">Themen</a></li>
+                    <li><a href="impressum/" class="link">Impressum</a></li>
+                    <li> <button onclick="darkmode()">Dark Mode</button></li>
+                </ul>
             </div>
-        </div>
-        <div class="main-right">
-            <a href="theaser_link/" name="theaser_link" class="theaser">Neues Thema anlgen</a>
+            <div class="main">
+            </div>
+            <div class="main-right">
+            </div>
         </div>
     </div>
     <script>

@@ -151,13 +151,24 @@ body{
         height: 60px;
         padding-left: 0;
         margin-left: 0;
-        .headline{
-            margin-left: 30px;
-            padding: 9px 0 3px 0;
-            font-weight: bold;
-            font-size: 35px;
-            text-align: left;
+        .forum_inhalt{
+            padding-top: 50px;
+            .answer{
+                text-decoration: none;
+                .headline{
+                    margin-left: 30px;
+                    padding: 9px 0 3px 0;
+                    font-weight: bold;
+                    font-size: 50px;
+                    text-align: left;
+                }
+            }
+            .answer:hover{
+                text-emphasis: none;
+            }
+            
         }
+        
         .menu{
             .line{
                 display: none;
@@ -553,6 +564,10 @@ body{
 .container{
     &.theaser{
         display: block;
+        .thaser_innere{
+            max-width: 100%;
+            width: 200px;
+        }
         .headline{
             margin-top: 10px;
             #headline{
