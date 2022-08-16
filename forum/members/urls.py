@@ -14,4 +14,3 @@ urlpatterns = [
     path('answer/<int:id>', views.answer, name='answer'),
     path('answer/theaseranswer', views.theaseranswer, name='theaseranswer'),
 ]
-]
