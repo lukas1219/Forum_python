@@ -97,3 +97,9 @@ def theaseanswer(request):
       'answer': answer,
     }
     return HttpResponse(template.render(context, request))
+  
+def theaseanswer(request):
+  p = request.POST['theaser_answer']
+  answer = forumanswer(theaser_answer=p)
+  answer.save()
+  return HttpResponseRedirect(reverse('answer'))
