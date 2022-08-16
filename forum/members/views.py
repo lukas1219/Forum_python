@@ -11,13 +11,6 @@ def index(request):
   }
   return HttpResponse(template.render(context, request))
 
-def theaseranswer(request):
-  theaser = forum.objects.all().values()
-  template = loader.get_template('theaseranswer.html')
-  context = {
-    'theaser': theaser,
-  }
-  return HttpResponse(template.render(context, request))
 
 def registrierung(request):
     template = loader.get_template('registrierung.html')
@@ -94,5 +87,13 @@ def answer(request, id):
     template = loader.get_template('theaseranswer.html')
     context = {
       'theaser': theaser,
+    }
+    return HttpResponse(template.render(context, request))
+  
+def theaseanswer(request):
+    answer = forumanswer.objects.all().values()
+    template = loader.get_template('theaseranswer.html')
+    context = {
+      'answer': answer,
     }
     return HttpResponse(template.render(context, request))
