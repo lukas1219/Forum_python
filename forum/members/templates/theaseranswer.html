@@ -37,15 +37,19 @@
         <div class="container">
             <div class="main-left">
                
-                <ul>
-                    <li><a href="../" class="link">Home</a></li>
-                    <li><a href="profil/" class="link">Profil</a></li>
-                    <li><a href="#" class="link">Themen</a></li>
-                    <li><a href="impressum/" class="link">Impressum</a></li>
-                    <li> <button onclick="darkmode()">Dark Mode</button></li>
-                </ul>
+              
             </div>
             <div class="main">
+                <div class="container">
+                    {% for x in theaser %}
+                            <div class="forum_inhalt">
+                                <table id="forum" class="forum_tabelle">
+                                    <tr><td class="headline">{{ x.headline }}</td></tr>
+                                    <tr><td class="theaser">{{ x.theaser_text }}</td></tr>
+                                </table>
+                            </div>
+                    {% endfor %}
+                </div>
             </div>
             <div class="main-right">
             </div>

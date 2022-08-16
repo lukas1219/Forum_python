@@ -160,6 +160,7 @@ body {
   }
   .header .forum_inhalt .answer {
     text-decoration: none;
+    display: inline;
   }
   .header .forum_inhalt .answer .headline {
     margin-left: 30px;
