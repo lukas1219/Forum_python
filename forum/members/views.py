@@ -92,7 +92,7 @@ def answer(request, id):
   
 def theaseanswer(request):
     answer = forumanswer.objects.all().values()
-    template = loader.get_template('theaseranswer.html')
+    template = loader.get_template('answer')
     context = {
       'answer': answer,
     }
