@@ -46,16 +46,23 @@
                         <table id="forum" class="forum_tabelle">
                             <tr><td class="headline">{{ theaser.headline }}</td></tr>
                             <tr><td class="theaser">{{ theaser.theaser_text }}</td></tr>
+                            <tr><td class="answer">{{ answer.theaseranswer }}</td></tr>
                         </table>
-                        <form class="theaser_innere" action="theaseranswer/" method="post">
-                            {% csrf_token %}
-                            <div class="thema">
-                                <textarea class="w3-input w3-border w3-round-large" name="theaser_answer" id="theaser_text"  placeholder="Antwort" aria-label="theaser"></textarea>
-                            </div>
-                            <input type="submit" class="forum" value="Posten">
-                            <a href="/members" class="zurück">Zurück</a>
-                        </form> 
                     </form>
+                    <form action="updaterecord/{{ theaseranswer.id }}" method="post">
+                        {% csrf_token %}
+                        <table id="forum" class="forum_tabelle">
+                            <tr><td class="answer">{{ answer.theaseranswer }}</td></tr>
+                        </table>
+                    </form>
+                    <form class="theaseranswer" action="theaseranswer/" method="post">
+                        {% csrf_token %}
+                        <div class="thema">
+                            <textarea class="w3-input w3-border w3-round-large" name="theaser_answer" id="theaser_text"  placeholder="Antwort" aria-label="theaser"></textarea>
+                        </div>
+                        <input type="submit" class="forum" value="Posten">
+                        <a href="/members" class="zurück">Zurück</a>
+                    </form> 
                 </div>
             </div>
             <div class="main-right">
