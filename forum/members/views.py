@@ -92,6 +92,6 @@ def answer(request, id):
   
 def theaseranswer(request):
   p = request.POST['theaser_answer']
-  theaser = fourm(theaser_answer=p)
+  theaser = forum(theaser_answer=p)
   theaser.save()
   return HttpResponseRedirect(reverse('theaseranswer.html'))
