@@ -155,11 +155,9 @@ body {
     padding-left: 0;
     margin-left: 0;
   }
-  .header .forum_inhalt {
-    padding-top: 50px;
-  }
   .header .forum_inhalt .answer {
     text-decoration: none;
+    padding-top: 50px;
   }
   .header .forum_inhalt .answer .forum_tabelle {
     display: -webkit-box;
@@ -169,6 +167,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    max-width: 500px;
+    width: 100%;
   }
   .header .forum_inhalt .answer .forum_tabelle .headline {
     margin-left: 30px;

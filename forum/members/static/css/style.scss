@@ -152,12 +152,14 @@ body{
         padding-left: 0;
         margin-left: 0;
         .forum_inhalt{
-            padding-top: 50px;
             .answer{
                 text-decoration: none;
+                padding-top: 50px;
                 .forum_tabelle{
                     display: flex;
                     flex-direction: column;
+                    max-width: 500px;
+                    width: 100%;
                     .headline{
                         margin-left: 30px;
                         padding: 9px 0 3px 0;
