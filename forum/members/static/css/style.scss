@@ -155,7 +155,8 @@ body{
             padding-top: 50px;
             .answer{
                 text-decoration: none;
-                display: inline;
+                display: flex;
+                flex-direction: column;
                 .headline{
                     margin-left: 30px;
                     padding: 9px 0 3px 0;
