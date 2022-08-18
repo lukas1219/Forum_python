@@ -49,10 +49,10 @@
                         <tr><td class="theaser">{{ theaser.theaser_text }}</td></tr>
                     </table>
                 </form>
-                {% for x in theaseranswer %}
+                {% for x in answer %}
                         <div class="forum_inhalt">
                             <table id="forum" class="forum_tabelle">
-                                <tr><td class="headline">{{ x.theaser_answer }}</td></tr>
+                                <tr><td class="theaseranswer">{{ x.theaseranswer }}</td></tr>
                             </table>
                         </div>
                 {% endfor %}
@@ -79,7 +79,7 @@
             let itemName = prompt('Antworten');
             let token = '{{ csrf_token }}';
             let formData = new FormData();
-            formData.append('itemName', itemName);
+            formData.append('forumanswer', forumanswer);
             formData.append('csrfmiddlewaretoken', token);
             fetch('/answer/', {
                 method: 'POST',
