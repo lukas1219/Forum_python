@@ -25,13 +25,12 @@
                 <tr><td class="profil">Passwort wiederholen: </td><td class="inhalt">{{ x.repeatpassword }}</td></tr>
                 <tr><td></td></tr>
                 <tr><td></td></tr>
-                <tr><td><a href="update/{{x.id}}" class="update">Profil bearbeiten</a></td><td><a href="/members" class="zurück">Zurück</a></td></tr>
+                <tr><td><a href="update/{{x.id}}" class="update">Profil bearbeiten</a></td></tr>
             </table>
-            
-          
         </div>
        
         {% endfor %}
+        <div class="zurück"><a href="/members" class="zurück">Zurück</a></div>
     </div>
 </body>
 </html>

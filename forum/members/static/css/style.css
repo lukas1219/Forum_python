@@ -501,7 +501,16 @@ body {
   text-decoration: none;
 }
 
-.container .profil_inhalt .profil_tabelle .zurück {
+.container .profil_inhalt .profil_tabelle .profil {
+  font-weight: bold;
+}
+
+.container .profil_inhalt .profil_tabelle .inhalt {
+  padding-left: 20px;
+  font-weight: normal;
+}
+
+.container .zurück {
   padding: 5px 10px 5px 10px;
   background-color: blue;
   width: auto;
@@ -510,17 +519,8 @@ body {
   border-radius: 3px;
 }
 
-.container .profil_inhalt .profil_tabelle .zurück:hover {
+.container .zurück:hover {
   text-decoration: none;
-}
-
-.container .profil_inhalt .profil_tabelle .profil {
-  font-weight: bold;
-}
-
-.container .profil_inhalt .profil_tabelle .inhalt {
-  padding-left: 20px;
-  font-weight: normal;
 }
 
 .profileding {
