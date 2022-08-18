@@ -68,19 +68,7 @@
            var element = document.body;
            element.classList.toggle("dark-mode");
         }
- 
-function answer() {
-            let itemName = prompt('Antworten');
-            let token = '{{ csrf_token }}';
-            let formData = new FormData();
-            formData.append('forumanswer', forumanswer);
-            formData.append('csrfmiddlewaretoken', token);
-            fetch('/answer/', {
-                method: 'POST',
-                body: formData
-            });        
-            window.location.reload();
-        }
+
     </script>
 </body>
 </html>
