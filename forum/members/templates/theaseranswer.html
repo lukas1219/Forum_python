@@ -47,15 +47,10 @@
                     <table id="forum" class="forum_tabelle">
                         <tr><td class="headline">{{ theaser.headline }}</td></tr>
                         <tr><td class="theaser">{{ theaser.theaser_text }}</td></tr>
+                        <tr><td class="theaseranswer">{{ theaser.theaseranswer }}</td></tr>
                     </table>
                 </form>
-                {% for x in answer %}
-                        <div class="forum_inhalt">
-                            <table id="forum" class="forum_tabelle">
-                                <tr><td class="theaseranswer">{{ x.theaseranswer }}</td></tr>
-                            </table>
-                        </div>
-                {% endfor %}
+               
                 <form class="theaseranswer"  method="post">
                     {% csrf_token %}
                     <div class="thema">
@@ -84,7 +79,7 @@
             fetch('/answer/', {
                 method: 'POST',
                 body: formData
-            });
+            });        
             window.location.reload();
         }
     </script>
