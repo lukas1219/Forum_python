@@ -91,15 +91,7 @@ def answer(request, id):
     return HttpResponse(template.render(context, request))
   
 def theaseranswer(request):
-    answer = forumanswer.objects.all().values()
-    template = loader.get_template('answer')
-    context = {
-      'answer': answer,
-    }
-    return HttpResponse(template.render(context, request))
-  
-def theaseranswerpost(request):
   p = request.POST['theaser_answer']
-  answer = forumanswer(theaser_answer=p)
-  answer.save()
-  return HttpResponseRedirect(reverse('answer'))
+  theaser = fourm(theaser_answer=p)
+  theaser.save()
+  return HttpResponseRedirect(reverse('theaseranswer.html'))
