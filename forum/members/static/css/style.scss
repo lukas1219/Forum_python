@@ -32,11 +32,29 @@ body{
     }
     .container{
         .main-left{
+           
             ul{
                 li{
                     .link{
                         color: white;
                     }
+                }
+            }
+        }
+        .main{
+            .forum_inhalt{
+                .forum_tabelle{
+                    tr{
+                        .headline{
+                            color: white;
+                        }
+                    }
+                   tr{
+                        .theaser{
+                            color: white;
+                        }
+                   }
+                   
                 }
             }
         }

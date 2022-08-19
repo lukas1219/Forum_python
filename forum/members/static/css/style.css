@@ -21,6 +21,14 @@ body {
   color: white;
 }
 
+.dark-mode .container .main .forum_inhalt .forum_tabelle tr .headline {
+  color: white;
+}
+
+.dark-mode .container .main .forum_inhalt .forum_tabelle tr .theaser {
+  color: white;
+}
+
 .dark-mode .zurück {
   color: white;
 }
