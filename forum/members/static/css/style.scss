@@ -271,17 +271,10 @@ body{
     }
     .main{
         display: flex;
-        justify-content: center;
-    }
-    .main-right{
-        display: flex;
-        justify-content: right;
-    }
-    @media only screen and(min-width: 1000px){
-        .container{
-            display: flex;
-            flex-direction: column;
-        }
+        flex-direction: column;
+        max-width: 1000px;
+        width: 100%;
+        padding-left: 5%;
         .forum_inhalt{
             .answer{
                 text-decoration: none;
@@ -295,13 +288,53 @@ body{
                         font-weight: bold;
                         font-size: 50px;
                         text-align: left;
+                        color: black;
+                    }
+                    .theaser{
+                        font-size: 30px;
+                        color: black;
                     }
                 }
             }
             .answer:hover{
                 text-emphasis: none;
             }
+        }
+        
+        
+    }
+    .main-right{
+        display: flex;
+        justify-content: right;
+    }
+    @media only screen and(min-width: 1000px){
+        .main{
+            .container{
+                display: flex;
+                flex-direction: column;
             
+                .forum_inhalt{
+                    .answer{
+                        text-decoration: none;
+                        padding-top: 50px;
+                        .forum_tabelle{
+                            max-width: 500px;
+                            width: 100%;
+                            .headline{
+                                margin-left: 30px;
+                                padding: 9px 0 3px 0;
+                                font-weight: bold;
+                                font-size: 50px;
+                                text-align: left;
+                                color: black;
+                            }
+                        }
+                    }
+                    .answer:hover{
+                        text-emphasis: none;
+                    }
+                }
+            }
         }
     }
 }

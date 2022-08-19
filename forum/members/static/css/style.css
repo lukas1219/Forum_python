@@ -297,9 +297,42 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 1000px;
+  width: 100%;
+  padding-left: 5%;
+}
+
+.container .main .forum_inhalt .answer {
+  text-decoration: none;
+  padding-top: 50px;
+}
+
+.container .main .forum_inhalt .answer .forum_tabelle {
+  max-width: 500px;
+  width: 100%;
+}
+
+.container .main .forum_inhalt .answer .forum_tabelle .headline {
+  margin-left: 30px;
+  padding: 9px 0 3px 0;
+  font-weight: bold;
+  font-size: 50px;
+  text-align: left;
+  color: black;
+}
+
+.container .main .forum_inhalt .answer .forum_tabelle .theaser {
+  font-size: 30px;
+  color: black;
+}
+
+.container .main .forum_inhalt .answer:hover {
+  -webkit-text-emphasis: none;
+          text-emphasis: none;
 }
 
 .container .main-right {
@@ -312,7 +345,7 @@ body {
 }
 
 @media only screen and (min-width: 1000px) {
-  .container .container {
+  .container .main .container {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -321,22 +354,23 @@ body {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  .container .forum_inhalt .answer {
+  .container .main .container .forum_inhalt .answer {
     text-decoration: none;
     padding-top: 50px;
   }
-  .container .forum_inhalt .answer .forum_tabelle {
+  .container .main .container .forum_inhalt .answer .forum_tabelle {
     max-width: 500px;
     width: 100%;
   }
-  .container .forum_inhalt .answer .forum_tabelle .headline {
+  .container .main .container .forum_inhalt .answer .forum_tabelle .headline {
     margin-left: 30px;
     padding: 9px 0 3px 0;
     font-weight: bold;
     font-size: 50px;
     text-align: left;
+    color: black;
   }
-  .container .forum_inhalt .answer:hover {
+  .container .main .container .forum_inhalt .answer:hover {
     -webkit-text-emphasis: none;
             text-emphasis: none;
   }
