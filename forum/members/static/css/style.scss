@@ -297,7 +297,7 @@ body{
                 }
             }
             .answer:hover{
-                text-emphasis: none;
+                text-decoration: none;
             }
         }
         
@@ -306,6 +306,14 @@ body{
     .main-right{
         display: flex;
         justify-content: right;
+        margin-top: 10px;
+        .theaser_link{
+            text-decoration: none;
+            color: black;
+        }
+        .theaser_link:hover{
+            text-decoration: none;
+        }
     }
     @media only screen and(min-width: 1000px){
         .main{
