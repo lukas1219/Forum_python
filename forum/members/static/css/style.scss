@@ -672,13 +672,13 @@ body{
 .container{
     &.theaser_answer{
         .main{
-            .container{
-                &.answer_container{
-                    padding-top: 20px;
-                    display: flex;
-                    flex-direction: column;
-                }
+            
+            .answer_container{
+                padding-top: 20px;
+                display: flex;
+                flex-direction: column;
             }
+            
         }
     }
 }

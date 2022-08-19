@@ -767,7 +767,7 @@ body {
   text-decoration: none;
 }
 
-.container.theaser_answer .main .container.answer_container {
+.container.theaser_answer .main .answer_container {
   padding-top: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
