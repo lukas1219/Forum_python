@@ -147,33 +147,11 @@ body{
   
     
     @media only screen and (min-width: 1000px){
-        display: flex;
+        display: flex;   
         height: 60px;
         padding-left: 0;
         margin-left: 0;
-        .forum_inhalt{
-            .answer{
-                text-decoration: none;
-                padding-top: 50px;
-                .forum_tabelle{
-                    display: flex;
-                    flex-direction: column;
-                    max-width: 500px;
-                    width: 100%;
-                    .headline{
-                        margin-left: 30px;
-                        padding: 9px 0 3px 0;
-                        font-weight: bold;
-                        font-size: 50px;
-                        text-align: left;
-                    }
-                }
-            }
-            .answer:hover{
-                text-emphasis: none;
-            }
-            
-        }
+       
         
         .menu{
             .line{
@@ -246,6 +224,7 @@ body{
             }
             
         }
+       
     }
     @media only screen and (min-width: 1200px){
         .headline{
@@ -264,6 +243,8 @@ body{
         }
     }
 }
+
+
 .container{
     padding-left: 15px;
     padding-right: 15px;
@@ -296,7 +277,33 @@ body{
         display: flex;
         justify-content: right;
     }
-  
+    @media only screen and(min-width: 1000px){
+        .container{
+            display: flex;
+            flex-direction: column;
+        }
+        .forum_inhalt{
+            .answer{
+                text-decoration: none;
+                padding-top: 50px;
+                .forum_tabelle{
+                    max-width: 500px;
+                    width: 100%;
+                    .headline{
+                        margin-left: 30px;
+                        padding: 9px 0 3px 0;
+                        font-weight: bold;
+                        font-size: 50px;
+                        text-align: left;
+                    }
+                }
+            }
+            .answer:hover{
+                text-emphasis: none;
+            }
+            
+        }
+    }
 }
 .container{
     max-width: 1530px;
