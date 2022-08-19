@@ -672,13 +672,22 @@ body{
 .container{
     &.theaser_answer{
         .main{
-            
             .answer_container{
                 padding-top: 20px;
                 display: flex;
                 flex-direction: column;
+                .forum_tabelle{
+                    .headline{
+                        font-size: 50px;
+                    }
+                    .theaser{
+                        font-size: 25px;
+                    }
+                    .theaseranswer{
+                        font-size: 25px;
+                    }
+                }
             }
-            
         }
     }
 }

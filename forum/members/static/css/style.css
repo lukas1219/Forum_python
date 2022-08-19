@@ -777,4 +777,16 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+
+.container.theaser_answer .main .answer_container .forum_tabelle .headline {
+  font-size: 50px;
+}
+
+.container.theaser_answer .main .answer_container .forum_tabelle .theaser {
+  font-size: 25px;
+}
+
+.container.theaser_answer .main .answer_container .forum_tabelle .theaseranswer {
+  font-size: 25px;
+}
 /*# sourceMappingURL=style.css.map */
