@@ -95,3 +95,4 @@ def theaseranswer(request, id):
   answer = forum(theaser_answer=p)
   answer.save()
   return HttpResponseRedirect("answer/"+id)
+  return render(request, "theasweranswer.html", context)
