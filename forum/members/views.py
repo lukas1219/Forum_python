@@ -1,7 +1,7 @@
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
-from .models import registieren, forum
+from .models import registieren, forum, answerforum
 
 def index(request):
   theaser = forum.objects.all().values()
@@ -92,7 +92,7 @@ def answer(request, id):
   
 def theaseranswer(request, id):
   p = request.POST['theaseranswer']
-  answer = forum(theaseranswer=p)
+  answer = answerforum(theaseranswer=p)
   answer.save()
   return HttpResponseRedirect("answer/"+id)
   return render(request, "theasweranswer.html", context)
