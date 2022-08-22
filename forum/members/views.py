@@ -91,8 +91,8 @@ def answer(request, id):
     return HttpResponse(template.render(context, request))
   
 def theaseranswer(request, id):
-  p = request.POST['theaser_answer']
-  answer = forum(theaser_answer=p)
+  p = request.POST['theaseranswer']
+  answer = forum(theaseranswer=p)
   answer.save()
   return HttpResponseRedirect("answer/"+id)
   return render(request, "theasweranswer.html", context)
