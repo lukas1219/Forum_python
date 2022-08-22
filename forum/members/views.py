@@ -94,4 +94,4 @@ def theaseranswer(request):
   p = request.POST['theaser_answer']
   theaser = forum(theaser_answer=p)
   theaser.save()
-  return HttpResponseRedirect(reverse('answer'))
+  return HttpResponseRedirect(reverse('theaseranswer.html'))
