@@ -96,5 +96,4 @@ def theaseranswer(request, id):
   p = request.POST['theaseranswer']
   answer = answerforum(theaseranswer=p)
   answer.save()
- 
-  return render_to_response('answer/theaseranswer.html', {'answer':theaser, 'id':id}, context)
+  return HttpResponseRedirect(reverse('answer/', id=(id)))
