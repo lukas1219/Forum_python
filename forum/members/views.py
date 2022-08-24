@@ -1,3 +1,4 @@
+from . import views
 from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
@@ -89,7 +90,8 @@ def answer(request, id):
       'theaser': theaser,
     }
     return HttpResponse(template.render(context, request))
-  
+
+
 def theaseranswer(request, id, args):
   p = request.POST['theaseranswer']
   answer = answerforum(theaseranswer=p)
