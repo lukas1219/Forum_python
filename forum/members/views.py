@@ -92,9 +92,9 @@ def answer(request, id):
     return HttpResponse(template.render(context, request))
 
 
-def theaseranswer(request, id,  *callback_args):
+def theaseranswer(request, id,  *args):
   p = request.POST['theaseranswer']
   answer = answerforum(theaseranswer=p)
   answer.save()
-  return HttpResponseRedirect(reverse('theaseranswer.html', callback_args=id))
+  return HttpResponseRedirect(reverse('theaseranswer.html', args=id))
 
