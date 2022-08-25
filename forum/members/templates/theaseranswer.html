@@ -59,13 +59,13 @@
                     <table id="forum" class="forum_tabelle">
                         <tr><td class="headline">{{ theaser.headline }}</td></tr>
                         <tr><td class="theaser">{{ theaser.theaser_text }}</td></tr>
-                        <tr><td class="theaseranswer">{{ theaser.theaseranswer }}</td></tr>
+                        <tr><td class="theaseranswer">{{ answerforum.theaser_answer }}</td></tr>
                     </table>
                 </form>
                 <form class="theaseranswer"  action="{{ theaser.id }}/theaseranswer/" method="post">
                     {% csrf_token %}
                     <div class="thema">
-                        <textarea class="w3-input w3-border w3-round-large" name="theaseranswer" id="theaseranswer"  placeholder="Antwort" aria-label="Antwort"></textarea>
+                        <textarea class="w3-input w3-border w3-round-large" name="theaser_answer" id="theaser_answer"  placeholder="Antwort" aria-label="Antwort"></textarea>
                     </div>
                     <input type="submit" class="forum" value="Posten">
                     <a href="/members" class="zurück">Zurück</a>

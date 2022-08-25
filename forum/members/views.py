@@ -95,8 +95,8 @@ def answer(request, id):
 def theaseranswer(request, id, *args, **self):
   theaser = forum.objects.get(id=id)
   theaser.is_favorite = True
-  p = request.POST['theaseranswer']
-  answer = answerforum(theaseranswer=p)
+  p = request.POST['theaser_answer']
+  answer = answerforum(theaser_answer=p)
   answer.save()
   return HttpResponseRedirect(reverse('answer/', args=(str(self.id))))
 
