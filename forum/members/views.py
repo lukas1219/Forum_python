@@ -92,7 +92,7 @@ def answer(request, id):
     return HttpResponse(template.render(context, request))
 
 
-def theaseranswer(request, id, args):
+def theaseranswer(request, id, *args, **self):
   theaser = forum.objects.get(id=id)
   theaser.is_favorite = True
   p = request.POST['theaseranswer']
