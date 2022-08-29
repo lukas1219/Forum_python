@@ -99,7 +99,7 @@ def theaseranswer(request, id):
   context = {
     'answer' : answer
   }
-    p = request.POST['theaseranswer']
+  p = request.POST['theaseranswer']
   answer = answerforum(theaseranswer=p)
   answer.save()
   return HttpResponse(template.render(context, request))
