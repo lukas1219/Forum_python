@@ -103,3 +103,4 @@ def theaseranswer(request, id):
   answer = answerforum(theaseranswer=p)
   answer.save()
   return HttpResponse(template.render(context, request))
+  return HttpResponseRedirect(reverse('theaseranswer.html'))
