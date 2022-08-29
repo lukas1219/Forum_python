@@ -59,8 +59,14 @@
                     <table id="forum" class="forum_tabelle">
                         <tr><td class="headline">{{ theaser.headline }}</td></tr>
                         <tr><td class="theaser">{{ theaser.theaser_text }}</td></tr>
-                        <tr><td class="theaseranswer">{{ answerforum.theaser_answer }}</td></tr>
                     </table>
+                    {% for x in anserforum %}
+                        <div class="forum_inhalt">
+                            <table id="forum" class="forum_tabelle">
+                                <tr><td class="theaseranswer">{{ x.theaser_answer }}</td></tr>
+                            </table> 
+                        </div>
+                    {% endfor %}
                 </form>
                 <form class="theaseranswer"  action="{{ theaser.id }}/theaseranswer/" method="post">
                     {% csrf_token %}
