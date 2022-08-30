@@ -91,16 +91,9 @@ def answer(request, id):
     }
     return HttpResponse(template.render(context, request))
 
-def answer_text(request, id):
-    theaser = forum.obects.get(id=id)
-    template = loader.get_template('theasernaswer.html')
-    context = {
-      'theaser': theaser,
-    }
-    return HTTPResponse(template.render(context, request))
 
 def theaseranswer(request, id):
   p = request.POST['theaseranswer']
   answerforum = answerforum(theaseranswer=p)
   answerforum.save()
-  return HttpResponseRedirect(reverse('answer_text'))
+  return HttpResponseRedirect(reverse('answer'))
