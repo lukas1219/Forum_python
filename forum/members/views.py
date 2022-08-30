@@ -92,8 +92,7 @@ def answer(request, id):
     return HttpResponse(template.render(context, request))
 
 
-def theaseranswer(request, id):
-  theaser = forum.objects.get(id=id)
+def theaseranswer(request):
   answerforum = answerforum.objects.all().values()
   context = {
     'answerforum' : answerforum
