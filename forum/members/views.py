@@ -101,9 +101,9 @@ def answerforum(request):
   return HttpResponse(template.render(context, request))
 
 def theaseranswer(request, id):
-  p = request.POST['theaseranswer']
-  answertext = answerforum(theaseranswer=p)
+  p = request.POST['theaser_answer']
+  answertext = answerforum(theaser_answer=p)
   answertext.save()
-  return HttpResponseRedirect(reverse('answer'))
+  return HttpResponseRedirect(reverse('answerforum'))
 
 
