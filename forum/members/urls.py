@@ -15,5 +15,4 @@ urlpatterns = [
     path('theaser_link/newtheaser/', views.newtheaser, name='newtheaser'),
     path('answer/<int:id>', views.answer, name='answer'),
     path('answer/<int:id>/theaseranswer/', views.theaseranswer, name='theaseranswer'),
-
 ]

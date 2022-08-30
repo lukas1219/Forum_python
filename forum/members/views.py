@@ -92,10 +92,11 @@ def answer(request, id):
     return HttpResponse(template.render(context, request))
 
 
-def theaseranswer(request, id, args):
+def theaseranswer(request, id):
   p = request.POST['theaseranswer']
+  theaser = get_object_or_404(theaser, pk=id)
   answertext = answerforum(theaseranswer=p)
   answertext.save()
-  return HttpResponseRedirect(reverse('forum:answer', args=(id.id)))
+  return HttpResponseRedirect(reverse('forum:answer', args=(theaser.id)))
 
 
