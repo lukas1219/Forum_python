@@ -93,7 +93,6 @@ def answer(request, id):
 
 
 def theaseranswer(request, id):
-  answerforum = answerforum.objects.all().values()
   p = request.POST['theaseranswer']
   answerforum = answerforum(theaseranswer=p)
   context = {
