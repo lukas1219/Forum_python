@@ -92,12 +92,12 @@ def answer(request, id):
     return HttpResponse(template.render(context, request))
 
 
-def theaseranswer(request):
+def theaseranswer(request, id):
   answerforum = answerforum.objects.all().values()
+  p = request.POST['theaseranswer']
+  answerforum = answerforum(theaseranswer=p)
   context = {
     'answerforum' : answerforum
   }
-  p = request.POST['theaseranswer']
-  answerforum = answerforum(theaseranswer=p)
   answerforum.save()
-  return HttpResponseRedirect(reverse('answer'))
+  return HttpResponseRedirect(reverse(context, 'answer'))
