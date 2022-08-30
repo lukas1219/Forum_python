@@ -3,6 +3,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.template import loader
 from django.urls import reverse
 from .models import registieren, forum, answerforum
+from django.shortcuts import render, get_object_or_404
 
 def index(request):
   theaser = forum.objects.all().values()
@@ -94,7 +95,7 @@ def answer(request, id):
 
 def theaseranswer(request, id):
   p = request.POST['theaseranswer']
-  theaser = get_object_or_404(theaser, pk=id)
+  theaser = get_object_or_404(theaser, id=id)
   answertext = answerforum(theaseranswer=p)
   answertext.save()
   return HttpResponseRedirect(reverse('forum:answer', args=(theaser.id)))
