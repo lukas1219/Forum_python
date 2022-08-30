@@ -94,12 +94,11 @@ def answer(request, id):
 
 def theaseranswer(request, id):
   theaser = forum.objects.get(id=id)
-  template = loader.get_template('theaseranswer.html')
-  answer = answerforum.objects.all().values()
+  answerforum = answerforum.objects.all().values()
   context = {
-    'answer' : answer
+    'answerforum' : answerforum
   }
   p = request.POST['theaseranswer']
-  answer = answerforum(theaseranswer=p)
-  answer.save()
-  return HttpResponse(template.render(context, request))
+  answerforum = answerforum(theaseranswer=p)
+  answerforum.save()
+  return HttpResponseRedirect(reverse('answer'))
