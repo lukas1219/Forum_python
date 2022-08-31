@@ -100,7 +100,7 @@ def answerforum(request):
   }
   return HttpResponse(template.render(context, request))
 
-def theaseranswer(request, id):
+def textanswer(request, id):
   p = request.POST['theaseranswer']
   answertext = answerforum(theaseranswer=p)
   answertext.save()
