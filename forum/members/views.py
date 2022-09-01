@@ -93,10 +93,10 @@ def answer(request, id):
     return HttpResponse(template.render(context, request))
 
 def answerforum(request):
-  answerforum = answerforum.objects.all().values()
+  answertext = answerforum.objects.all().values()
   template = loader.get_template('theaseranswer.html')
   context = {
-    'answerforum': answerforum,
+    'answertext': answertext,
   }
   return HttpResponse(template.render(context, request))
 
