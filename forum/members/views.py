@@ -96,7 +96,7 @@ def answerforum(request):
   answerforum = answerforum.objects.all().values()
   template = loader.get_template('theaseranswer.html')
   context = {
-    'answertext': answertext,
+    'answerforum': answerforum,
   }
   return HttpResponse(template.render(context, request))
 
