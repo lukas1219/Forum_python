@@ -104,15 +104,4 @@ def textanswer(request, id):
   p = request.POST['theaseranswer']
   answertext = answerforum(theaseranswer=p)
   answertext.save()
-  if request.method == 'POST':
-        forum = forum(request.POST)
-        if forum.is_valid():
-            forum.save()
-            id = int(form_id) + 1
-            url = reverse('opname:get_forum', kwargs={'id': id})
-            return HttpResponseRedirect(url)
-  else:
-      forum = forum()
-  return render(request, 'answerforum', {'forum': forum})
-
-   
+  return HttpResponseRedirect(reverse(request, 'answerforum'))
