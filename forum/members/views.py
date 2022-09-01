@@ -105,5 +105,3 @@ def textanswer(request, id):
   answertext = answerforum(theaseranswer=p)
   answertext.save()
   return HttpResponseRedirect(reverse('answerforum'))
-
-
