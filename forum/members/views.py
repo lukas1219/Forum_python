@@ -102,6 +102,6 @@ def answerforum(request):
 
 def textanswer(request, id):
   p = request.POST['theaseranswer']
-  answerforum = answerforum(theaseranswer=p)
-  answerforum.save()
+  answertext = answerforum(theaseranswer=p)
+  answertext.save()
   return HttpResponseRedirect(reverse(request, 'answerforum'))
