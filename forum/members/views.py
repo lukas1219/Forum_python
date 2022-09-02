@@ -102,4 +102,3 @@ def textanswer(request, id):
   answertext = answerforum(theaseranswer=p)
   answertext.save()
   return HttpResponse(template.render(context, request))
-
