@@ -104,4 +104,4 @@ def textanswer(request, id):
   p = request.POST('theaseranswer')
   answerforum = answerforum(theaseranswer=p)
   answerforum.save()
-  return redict('answerforum')
+  return HttpResponseRedirect('answerforum')
