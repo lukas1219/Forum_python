@@ -94,13 +94,21 @@ def answer(request, id):
 
 
 
-def textanswer(request, id):
-  answerforum = answerforum.objects.all().values()
-  template = loader.get_template('theaseranswer.html')
-  context = {
-    'answerforum': answerforum,
-  }
-  p = request.POST('theaseranswer')
-  answertext = answerforum(theaseranswer=p)
-  answertext.save()
-  return HttpResponseRedirect('answer')
+##def textanswer(request, id):
+  ##answerforum = answerforum.objects.all().values()
+  ##template = loader.get_template('theaseranswer.html')
+  ##context = {
+    ##'answerforum': answerforum,
+  ##}
+  ##p = request.POST('theaseranswer')
+  ##answertext = answerforum(theaseranswer=p)
+  ##answertext.save()
+  ##return HttpResponse(template.render(context, request))
+
+
+def mylist(request):
+    if request.method == 'POST':
+        print('Received data:', request.POST['theaseranswer'])
+        ShoppingItem.objects.create(name = request.POST['theasweranswer'])
+    all_items = answerforum.objects.all()
+    return render(request, 'theaseranswer.html', {'all_items': all_items})

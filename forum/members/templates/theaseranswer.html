@@ -55,12 +55,12 @@
                         </div>
                     {% endfor %}
                 </form>
-                <form class="theaseranswer"  action="{{ theaser.id }}/textanswer/" method="post">
+                <form class="theaseranswer"  method="post">
                     {% csrf_token %}
                     <div class="thema">
                         <textarea class="w3-input w3-border w3-round-large" name="theaseranswer" placeholder="Antwort" aria-label="Antwort"></textarea>
                     </div>
-                    <input type="submit" class="forum" value="Posten">
+                    <input type="submit" class="forum" value="Posten" onclick="answer">
                     <a href="/members" class="zurück">Zurück</a>
                 </form> 
             </div>
@@ -73,7 +73,20 @@
            var element = document.body;
            element.classList.toggle("dark-mode");
         }
-
+        
+        function answer() {
+            let itemName = prompt('Neues Element hinzufügen');
+            let token = '{{ csrf_token }}';
+            let formData = new FormData();
+            formData.append('itemName', itemName);
+            formData.append('csrfmiddlewaretoken', token);
+            fetch('{{ theaser.id }}/textanswer/', {
+                method: 'POST',
+                body: formData
+            });
+            window.location.reload();
+        }
+        
     </script>
 </body>
 </html>
