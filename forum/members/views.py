@@ -106,9 +106,16 @@ def answer(request, id):
   ##return HttpResponse(template.render(context, request))
 
 
-def mylist(request):
-    if request.method == 'POST':
-        print('Received data:', request.POST['theaseranswer'])
-        ShoppingItem.objects.create(name = request.POST['theasweranswer'])
-    all_items = answerforum.objects.all()
-    return render(request, 'theaseranswer.html', {'all_items': all_items})
+def result(request, league_id, season_id, matchday):
+    scores = request.POST.get("scores", None)
+    if scores != None:
+        scores = scores.replace("&quot;", "'")
+    #scores = scores[1:-1]
+    scores = json.loads(scores)
+    context = {
+        'league_id': league_id,
+        'season_id': season_id,
+        'matchday': matchday,
+        'scores': scores,
+    }
+    return render(request, 'theaseranswer.html', context)

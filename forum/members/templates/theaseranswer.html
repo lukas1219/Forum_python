@@ -60,7 +60,7 @@
                     <div class="thema">
                         <textarea class="w3-input w3-border w3-round-large" name="theaseranswer" placeholder="Antwort" aria-label="Antwort"></textarea>
                     </div>
-                    <input type="submit" class="forum" value="Posten" onclick="answer">
+                    <input type="submit" class="forum" value="Posten">
                     <a href="/members" class="zurück">Zurück</a>
                 </form> 
             </div>
@@ -74,18 +74,20 @@
            element.classList.toggle("dark-mode");
         }
         
-        function answer() {
-            let itemName = prompt('Neues Element hinzufügen');
-            let token = '{{ csrf_token }}';
-            let formData = new FormData();
-            formData.append('itemName', itemName);
-            formData.append('csrfmiddlewaretoken', token);
-            fetch('{{ theaser.id }}/textanswer/', {
-                method: 'POST',
-                body: formData
-            });
-            window.location.reload();
-        }
+        
+        $("form").submit(function() {
+            var checked_ids = new Array();
+            var f_amount = $("select option:selected").val();
+            $("#demo2").jstree("get_checked",null,true).each 
+                (function (index,value) {
+                    if (value.children[2].id) { 
+                        checked_ids.push(value.children[2].id); 
+                    }
+                });
+            var f_ids = checked_ids.join(" ");
+
+        });
+        
         
     </script>
 </body>
