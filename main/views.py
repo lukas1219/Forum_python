@@ -1,121 +1,108 @@
-from . import views
-from django.http import HttpResponse, HttpResponseRedirect
-from django.template import loader
-from django.urls import reverse
-from .models import registieren, forum, answerforum
-from django.shortcuts import get_object_or_404
 
-def index(request):
-  theaser = forum.objects.all().values()
-  template = loader.get_template('index.html')
-  context = {
-    'theaser': theaser,
-  }
-  return HttpResponse(template.render(context, request))
+from django.shortcuts import redirect, render, get_object_or_404
+from .models import Author, Category, Post, Comment, Reply
+from .utils import update_views
+from .forms import PostForm
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.models import User
+from django.core.paginator import Paginator, PageNotAnInteger, EmptyPage
 
 
-def registrierung(request):
-    template = loader.get_template('registrierung.html')
-    return HttpResponse(template.render({}, request))
+def home(request):
+    forums = Category.objects.all()
+    num_posts = Post.objects.all().count()
+    num_users = User.objects.all().count()
+    num_categories = forums.count()
+    try:
+        last_post = Post.objects.latest("date")
+    except:
+        last_post = []
+
+    context = {
+        "forums":forums,
+        "num_posts":num_posts,
+        "num_users":num_users,
+        "num_categories":num_categories,
+        "last_post":last_post,
+        "title": "OZONE forum app"
+    }
+    return render(request, "forums.html", context)
+
+def detail(request, slug):
+    post = get_object_or_404(Post, slug=slug)
+    if request.user.is_authenticated:
+        author = Author.objects.get(user=request.user)
     
+    if "comment-form" in request.POST:
+        comment = request.POST.get("comment")
+        new_comment, created = Comment.objects.get_or_create(user=author, content=comment)
+        post.comments.add(new_comment.id)
 
-def profil(request):
-    template = loader.get_template('profil.html')
-    return HttpResponse(template.render({}, request))  
-  
-def impressum(request):
-    template = loader.get_template('impressum.html')
-    return HttpResponse(template.render({}, request))  
-  
-def update(request, id):
-    profil = registieren.objects.get(id=id)
-    template = loader.get_template('profil_bearbeiten.html')
+    if "reply-form" in request.POST:
+        reply = request.POST.get("reply")
+        commenr_id = request.POST.get("comment-id")
+        comment_obj = Comment.objects.get(id=commenr_id)
+        new_reply, created = Reply.objects.get_or_create(user=author, content=reply)
+        comment_obj.replies.add(new_reply.id)
+
+
     context = {
-      'profil' : profil,
+        "post":post,
+        "title": "OZONE: "+post.title,
     }
-    return HttpResponse(template.render(context, request))
+    update_views(request, post)
 
-  
-def profil(request):
-  profil = registieren.objects.all().values()
-  template = loader.get_template('profil.html')
-  context = {
-    'profil': profil,
-  }
-  return HttpResponse(template.render(context, request))
+    return render(request, "detail.html", context)
 
-def addrecord(request):
-  u = request.POST['benutzername']
-  v = request.POST['email']
-  w = request.POST['firstname']
-  x = request.POST['lastname']
-  y = request.POST['password']
-  z = request.POST['repeatpassword']
-  profil = registieren(benutzername=u, email=v, firstname=w, lastname=x, password=y, repeatpassword=z)
-  profil.save()
-  return HttpResponseRedirect(reverse('index'))
+def posts(request, slug):
+    category = get_object_or_404(Category, slug=slug)
+    posts = Post.objects.filter(approved=True, categories=category)
+    paginator = Paginator(posts, 5)
+    page = request.GET.get("page")
+    try:
+        posts = paginator.page(page)
+    except PageNotAnInteger:
+        posts = paginator.page(1)
+    except EmptyPage:
+        posts = paginator.page(paginator.num_pages) 
 
-def updaterecord(request, id):
-  benutzername = request.POST['benutzername']
-  email = request.POST['email']
-  firstname = request.POST['firstname']
-  lastname = request.POST['lastname']
-  password = request.POST['password']
-  repeatpassword = request.POST['repeatpassword']
-  profil = registieren.objects.get(id=id)
-  profil.benutzername = benutzername
-  profil.email = email
-  profil.firstname = firstname
-  profil.lastname = lastname
-  profil.password = password
-  profil.repeatpassword = repeatpassword
-  profil.save()
-  return HttpResponseRedirect(reverse('profil'))
-
-def theaser_link(request):
-  template = loader.get_template('new_theaser.html')
-  return HttpResponse(template.render({}, request))
-
-
-def newtheaser(request):
-  s = request.POST['headline']
-  t = request.POST['theaser_text']
-  theaser = forum(headline=s, theaser_text=t)
-  theaser.save()
-  return HttpResponseRedirect(reverse('index'))
-
-def answer(request, id):
-    theaser = forum.objects.get(id=id)
-    template = loader.get_template('theaseranswer.html')
     context = {
-      'theaser': theaser,
+        "posts":posts,
+        "forum": category,
+        "title": "OZONE: Posts"
     }
-    return HttpResponse(template.render(context, request))
+
+    return render(request, "posts.html", context)
 
 
+@login_required
+def create_post(request):
+    context = {}
+    form = PostForm(request.POST or None)
+    if request.method == "POST":
+        if form.is_valid():
+            print("\n\n its valid")
+            author = Author.objects.get(user=request.user)
+            new_post = form.save(commit=False)
+            new_post.user = author
+            new_post.save()
+            form.save_m2m()
+            return redirect("home")
+    context.update({
+        "form": form,
+        "title": "OZONE: Create New Post"
+    })
+    return render(request, "create_post.html", context)
 
-##def textanswer(request, id):
-  ##answerforum = answerforum.objects.all().values()
-  ##template = loader.get_template('theaseranswer.html')
-  ##context = {
-    ##'answerforum': answerforum,
-  ##}
-  ##p = request.POST('theaseranswer')
-  ##answertext = answerforum(theaseranswer=p)
-  ##answertext.save()
-  ##return HttpResponse(template.render(context, request))
-
-
-def result(request, league_id, season_id, matchday):
-    scores = request.POST.get("scores", None)
-    if scores != None:
-        scores = scores.replace("&quot;", "'")
-    #scores = scores[1:-1]
-    scores = json.loads(scores)
+def latest_posts(request):
+    posts = Post.objects.all().filter(approved=True)[:10]
     context = {
-        'league_id': league_id,
-        'season_id': season_id,
-        'matchday': matchday,
-        'scores': scores,
+        "posts":posts,
+        "title": "OZONE: Latest 10 Posts"
     }
-    return render(request, 'theaseranswer.html', context)
+
+    return render(request, "latest-posts.html", context)
+
+def search_result(request):
+
+    return render(request, "search.html")
