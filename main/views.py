@@ -25,7 +25,7 @@ def home(request):
         "last_post":last_post,
         "title": "OZONE forum app"
     }
-    return render(request, 'forums.html', context)
+    return render(request, "forums.html", context)
 
 def detail(request, slug):
     post = get_object_or_404(Post, slug=slug)
