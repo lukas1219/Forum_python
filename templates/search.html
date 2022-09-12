@@ -1,6 +1,11 @@
 {% extends 'base.html' %}
 {% load hitcount_tags %}
 {% block content %}
+{% load static %}
+<header>
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %} " />
+
+</header>
     <div class="container">
         <!--Navigation-->
         <div class="navigate">

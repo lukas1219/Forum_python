@@ -1,7 +1,10 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
-    
+    <header>
+        <link rel="shortcut icon" href="{% static 'favicon.ico' %} " />
+
+    </header>
     <div class="container">
         <div class="subforum">
             {% if forums %}
