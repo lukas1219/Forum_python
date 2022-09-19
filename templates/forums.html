@@ -23,7 +23,7 @@
                         </div>
                         <div class="subforum-info subforum-column">
                             {% if forum.last_post %}
-                                <b><a href="{{forum.last_post.get_url}}">Last post</a></b> by <a href="">{{forum.last_post.user.fullname|title}}</a> 
+                                <b><a href="{{forum.last_post.get_url}}">letzter Post</a></b> von <a href="">{{forum.last_post.user.fullname|title}}</a> 
                                 <br>on <small>{{forum.last_post.date|date}}</small>
                             {% else %}
                                 <span>Keine Posts vorhanden</span>
