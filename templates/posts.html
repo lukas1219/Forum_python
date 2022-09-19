@@ -17,43 +17,39 @@
                 </div>
 
                 {% for post in posts %}
-                <div class="table-row">
+                    <div class="table-row">
+                        {% if post.closed == True %}
+                        <div class="status"><i class="fa fa-lock"></i></div>
+                        {% elif post.num_comments == 0 %}
+                        <div class="status"><i class="fa fa-frown-o"></i></div>
+                        {% elif post.num_comments > 0 and post.num_comments < 2 %}
+                        <div class="status"><i class="fa fa-book"></i></div>
+                        {% elif post.num_comments > 2 and post.num_comments < 4 %}
+                        <div class="status"><i class="fa fa-rocket"></i></div>
+                        {% elif post.num_comments >= 4 %}
+                        <div class="status"><i class="fa fa-fire"></i></div>
+                        {% endif %}
+                        <div class="subjects">
+                            <a href="{{post.get_url}}">{{post.title}}</a>
+                            <br>
+                            <span>Started by <b><a href="">{{post.user.fullname|title}}</a></b> .</span>
+                        </div>
+                        <div class="replies">
+                            {{post.num_comments}} comments <br> {% get_hit_count for post %} views
+                        </div>
 
-                    {% if post.closed == True %}
-                    <div class="status"><i class="fa fa-lock"></i></div>
-                    {% elif post.num_comments == 0 %}
-                    <div class="status"><i class="fa fa-frown-o"></i></div>
-                    {% elif post.num_comments > 0 and post.num_comments < 2 %}
-                    <div class="status"><i class="fa fa-book"></i></div>
-                    {% elif post.num_comments > 2 and post.num_comments < 4 %}
-                    <div class="status"><i class="fa fa-rocket"></i></div>
-                    {% elif post.num_comments >= 4 %}
-                    <div class="status"><i class="fa fa-fire"></i></div>
-                    
-                    {% endif %}
-
-
-                    <div class="subjects">
-                        <a href="{{post.get_url}}">{{post.title}}</a>
-                        <br>
-                        <span>Started by <b><a href="">{{post.user.fullname|title}}</a></b> .</span>
+                        {% if post.last_reply %}
+                        <div class="last-reply">
+                            {{post.last_reply.date|date}}
+                            <br>By <b><a href="">{{post.last_reply.user.fullname|title}}</a></b>
+                        </div>
+                        {% else %}
+                        <div class="last-reply">
+                            {{post.date|date}}
+                            <br>By <b><a href="">{{post.user.fullname|title}}</a></b>
+                        </div>
+                        {% endif %}
                     </div>
-                    <div class="replies">
-                        {{post.num_comments}} comments <br> {% get_hit_count for post %} views
-                    </div>
-
-                    {% if post.last_reply %}
-                    <div class="last-reply">
-                        {{post.last_reply.date|date}}
-                        <br>By <b><a href="">{{post.last_reply.user.fullname|title}}</a></b>
-                    </div>
-                    {% else %}
-                    <div class="last-reply">
-                        {{post.date|date}}
-                        <br>By <b><a href="">{{post.user.fullname|title}}</a></b>
-                    </div>
-                    {% endif %}
-                </div>
                 {% endfor %}
             {% else %}
             <div class="subforum-title">
