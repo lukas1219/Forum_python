@@ -13,7 +13,7 @@
             <!--Original thread-->
             <div class="head">
                 <div class="authors">Author</div>
-                <div class="content">Topic: {{post.title}} (Read {% get_hit_count for post %} Times)</div>
+                <div class="content">Thema: {{post.title}} (Read {% get_hit_count for post %} Times)</div>
             </div>
 
             <div class="body">
@@ -28,7 +28,7 @@
                     {{post.content|safe}}
                     <br>
                     <div class="comment">
-                        <button onclick="showComment()">Comment</button>
+                        <button onclick="showComment()">Posten</button>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
             </div>
         </form>
         {% else %}
-<div style="background-color:#fff;color:#000;font-weight:bolder;padding:20px;width:100%;"> You need to <a href="{% url 'signin' %}"><b>login</b></a> to comment or reply.! </div>        
+<div style="background-color:#fff;color:#000;font-weight:bolder;padding:20px;width:100%;"> Melde dich bitte an <a href="{% url 'signin' %}"><b>login</b></a></div>        
 
         {% endif %}
 
