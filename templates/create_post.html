@@ -1,8 +1,12 @@
 {% extends 'base.html' %}
 {% load crispy_forms_tags %}
 {% block content %}
+{% load static %}
+<header>
+    <link rel="shortcut icon" href="{% static 'favicon.ico' %} " />
 
-<h1 style="text-align:center; margin-block:50px; color:red;">Hey {{user}}, Write something</h1>
+</header>
+<h1 style="text-align:center; margin-block:50px; color:red;">Hey {{user}}, schreib etwas</h1>
 
 <form method="POST" style="margin-left:150px;">
     {% csrf_token %}    
