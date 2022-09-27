@@ -19,15 +19,15 @@
                 {% for post in posts %}
                     <div class="table-row">
                         {% if post.closed == True %}
-                        <div class="status"><i class="fa fa-lock"></i></div>
-                        {% elif post.num_comments == 0 %}
-                        <div class="status"><i class="fa fa-frown-o"></i></div>
-                        {% elif post.num_comments > 0 and post.num_comments < 2 %}
-                        <div class="status"><i class="fa fa-book"></i></div>
-                        {% elif post.num_comments > 2 and post.num_comments < 4 %}
-                        <div class="status"><i class="fa fa-rocket"></i></div>
-                        {% elif post.num_comments >= 4 %}
-                        <div class="status"><i class="fa fa-fire"></i></div>
+                            <div class="status"><i class="fa fa-lock"></i></div>
+                            {% elif post.num_comments == 0 %}
+                            <div class="status"><i class="fa fa-frown-o"></i></div>
+                            {% elif post.num_comments > 0 and post.num_comments < 2 %}
+                            <div class="status"><i class="fa fa-book"></i></div>
+                            {% elif post.num_comments > 2 and post.num_comments < 4 %}
+                            <div class="status"><i class="fa fa-rocket"></i></div>
+                            {% elif post.num_comments >= 4 %}
+                            <div class="status"><i class="fa fa-fire"></i></div>
                         {% endif %}
                         <div class="subjects">
                             <a href="{{post.get_url}}">{{post.title}}</a>
@@ -51,15 +51,16 @@
                         {% endif %}
                     </div>
                 {% endfor %}
+                
                 {% else %}
                 <div class="subforum-title">
-                    <h1><i class="fa fa-frown-o"></i>&nbsp;Moment sind es keine Artikel vorhanden</h1>
+                    <h1><i class="fa fa-frown-o"></i>&nbsp;Moment sind keine Artikel vorhanden</h1>
                 </div>
             </div>
         {% endif %}
             
             
-        </div>
+            </div>
         <!--Pagination starts-->
             {% if posts.is_paginated %}
                 <div class="pagination">
@@ -76,4 +77,4 @@
         <span><i class="fa fa-rocket"></i>&nbsp; High Engagement Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
         <span><i class="fa fa-lock"></i>&nbsp; Closed Topic</span>&nbsp;&nbsp;&nbsp;<a href=""><i class="fa fa-share-square"></i></a><br>
     </div> -->
-    {% endblock content %}
+{% endblock content %}

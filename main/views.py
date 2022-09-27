@@ -54,6 +54,7 @@ def detail(request, slug):
 
     return render(request, "detail.html", context)
 
+
 def posts(request, slug):
     category = get_object_or_404(Category, slug=slug)
     posts = Post.objects.filter(approved=True, categories=category)
