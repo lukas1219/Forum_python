@@ -90,7 +90,7 @@ def create_post(request):
             form.save_m2m()
             return redirect("home")
     context.update({
-        "form": form,
+        "form":form,
         "title": "OZONE: Create New Post"
     })
     return render(request, "create_post.html", context)
