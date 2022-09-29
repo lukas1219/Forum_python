@@ -98,7 +98,7 @@ def create_post(request):
 def latest_posts(request):
     posts = Post.objects.all().filter(approved=True)[:10]
     context = {
-        "posts": posts,
+        "posts":posts,
         "title": "OZONE: Latest 10 Posts"
     }
 
