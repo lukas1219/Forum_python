@@ -40,7 +40,7 @@ def detail(request, slug):
 
     if "reply-form" in request.POST:
         reply = request.POST.get("reply")
-        comment_id = request.POST.get("comment_id")
+        comment_id = request.POST.get("comment-id")
         comment_obj = Comment.objects.get(id=comment_id)
         new_reply, created = Reply.objects.get_or_create(user=author, content=reply)
         comment_obj.replies.add(new_reply.id)
