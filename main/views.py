@@ -67,12 +67,13 @@ def posts(request, slug):
         posts = paginator.page(paginator.num_pages) 
 
     context = {
-        "posts": posts,
+        "posts":posts,
         "forum": category,
         "title": "OZONE: Posts"
     }
 
     return render(request, "posts.html", context)
+
 
 
 @login_required
