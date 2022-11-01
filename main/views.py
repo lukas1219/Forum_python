@@ -75,7 +75,6 @@ def posts(request, slug):
     return render(request, "posts.html", context)
 
 
-
 @login_required
 def create_post(request):
     context = {}
