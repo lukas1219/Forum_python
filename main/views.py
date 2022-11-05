@@ -1,4 +1,3 @@
-
 from django.shortcuts import redirect, render, get_object_or_404
 from .models import Author, Category, Post, Comment, Reply
 from .utils import update_views
