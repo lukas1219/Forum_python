@@ -5,7 +5,7 @@
     <div class="container">
         <!--Navigation-->
         <div class="navigate">
-            <span><a href="{% url 'home' %}">Home</a> >> <a href="{{post.categories.all.0.get_url}}">{{post.categories.all.0}}</a> >> <a href="{{post.get_url}}">{{post.title}}</a></span>
+            <span><a href="{% url 'home' %}">MyForum - Forums</a> >> <a href="{{post.categories.all.0.get_url}}">{{post.categories.all.0}}</a> >> <a href="{{post.get_url}}">{{post.title}}</a></span>
         </div>
 
         <!--Topic Section-->
@@ -13,7 +13,7 @@
             <!--Original thread-->
             <div class="head">
                 <div class="authors">Author</div>
-                <div class="content">Thema: {{post.title}} (Read {% get_hit_count for post %} Times)</div>
+                <div class="content">Topic: {{post.title}} (Read {% get_hit_count for post %} Times)</div>
             </div>
 
             <div class="body">
@@ -28,7 +28,7 @@
                     {{post.content|safe}}
                     <br>
                     <div class="comment">
-                        <button onclick="showComment()">Posten</button>
+                        <button onclick="showComment()">Comment</button>
                     </div>
                 </div>
             </div>
@@ -48,7 +48,7 @@
             </div>
         </form>
         {% else %}
-<div style="background-color:#fff;color:#000;font-weight:bolder;padding:20px;width:100%;"> Melde dich bitte an <a href="{% url 'signin' %}"><b>login</b></a></div>        
+<div style="background-color:#fff;color:#000;font-weight:bolder;padding:20px;width:100%;"> You need to <a href="{% url 'signin' %}"><b>login</b></a> to comment or reply.! </div>        
 
         {% endif %}
 

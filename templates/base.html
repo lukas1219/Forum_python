@@ -7,7 +7,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{title}}</title>
     <link rel="stylesheet" href="{% static 'style.css' %}">
-    <link rel="shortcut icon" href="{% static 'favicon.ico' %} " />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital@1&display=swap" rel="stylesheet">
@@ -24,13 +23,13 @@
                     {% if user.is_authenticated %}
                     <li class="nav-item"><a href="{% url 'logout' %}">Logout</a></li>
                     {% else %}
-                    <li class="nav-item"><a href="{% url 'signup' %}">Regestrieren</a></li>
-                    <li class="nav-item"><a href="{% url 'signin' %}">Login</a></li>
+                    <li class="nav-item"><a href="{% url 'signup' %}">Signup</a></li>
+                    <li class="nav-item"><a href="{% url 'signin' %}">Signin</a></li>
                     {% endif %}
                 </ul>
             </nav>
             <a class="bar-icon" id="iconBar" onclick="hideIconBar()"><i class="fa fa-bars"></i></a>
-            <div class="brand">Karten Forum</div>
+            <div class="brand">OZONE</div>
             {% if user.is_authenticated %}
             <div style="font-size:50px;font-weight300px;margin-left:100px;"><a href="{% url 'create_post' %}">+</a></div>
             {% endif %}
@@ -59,7 +58,7 @@
     {% endblock content %}
     <div style="margin-bottom: 150px;"></div>
     <footer>
-        <span>&copy;  Lukas Sartori | All Rights Reserved</span>
+        <span>&copy;  Elwil Reyes Hernandez | All Rights Reserved</span>
     </footer>
     <script src="{% static 'main.js' %}"></script>
 </body>
